@@ -9,60 +9,43 @@
   </head>
 </head>
 <body>
-    <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <!-- <header>
+    <div>
+        <img src="./img/LogoConTitulo.png" alt="" class="logo">
+        <nav>
+            <ul id="menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Publicaciones</a></li>
+                <li><a href="#">Sobre nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li id="cajabuscador"><input id='buscador'type="text" placeholder="Buscar..."></li>
+                <li id="lupa"><a href="#"><img id='lupabuscar' src="./img/lupa.png" alt="buscar"></a></li>
+                <li id="CajaUsuario"><a href="#" class="linkusuario"><img id='imgUsuario' src="./img/ninjausuario.png" alt="Usuario"><img id='imgUsuario2' src="./img/ninja-unscreen.gif" alt="Usuario"></a></li>
+                <li id="Cajacarro"><a href="#" class="linkcarro"><img id='imgcarro' src="./img/carro.png" alt="Usuario"><img id='imgcarro2' src="./img/carro2.png" alt="Usuario"></a></li>
                 </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav> -->
+        </nav>
+        
+    </div>
+ </header> -->
  <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
+            <img src="./img/LogoConTitulo.png" alt="" class="logo">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav justify-content-between w-100 mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">Productos</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
+                  Publicaciones
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">Action</a></li>
@@ -72,13 +55,24 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                <a class="nav-link" aria-disabled="true">Sobre nosotros</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-disabled="true">Contacto</a>
+              </li>
+              <li>
+                <div class="d-inline">
+                  <form role="search">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                  </form>
+                  <a href="#"><img id='lupabuscar' src="./img/lupa.png" alt="buscar"></a>
+                  <a href="#"><img id='imgUsuario2' src="./img/ninja-unscreen.gif" alt="Usuario"></a>
+                  <a href="#" class="linkcarro"><img id='imgcarro' src="./img/carro.png" alt="Usuario"></a>
+                </div>
+                
+            </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            
           </div>
         </div>
       </nav>
