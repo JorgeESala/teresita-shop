@@ -17,7 +17,7 @@ body{
     
 }
 header{
-    background: #AFF5FC;
+    background: #B6AFFC;
     width: 100%;
     display: table;
 }
@@ -30,14 +30,17 @@ header{
 #menu li a{
     text-decoration: none;
     color: black;
-font-weight: bold;
-    font-family: Fredoka;
+    font-weight: bold;
     font-size: larger;
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:"wdth" 75;
 }
 
 #menu li a:hover{
-    color: red;
-    transition: color 1s;
+    color: #B9EFE8;
+    
 }
 #menu #cajabuscador{
     list-style: none;
@@ -46,7 +49,7 @@ font-weight: bold;
     padding-top: 60px;
 }
 #menu #lupa {
-    margin-left: 5px;
+    margin-left: 15px;
     padding-top: 60px;
 }
 #lupa #lupabuscar{
@@ -92,6 +95,38 @@ font-weight: bold;
 }
 
 #menu #CajaUsuario .linkusuario:hover img:first-child{
+    display: none;
+    
+}
+#menu #Cajacarro{
+    list-style: none;
+    float: left;
+    margin-left: 20px;
+    padding-top:55px;
+}
+
+#menu #Cajacarro #imgcarro{
+    width: 40px;
+    height: 40px;
+
+}
+#menu #Cajacarro #imgcarro2{
+    width: 40px;
+    height: 40px;
+
+}
+
+#menu #Cajacarro .linkcarro img:last-child{
+    display: none;
+    
+}
+
+#menu #Cajacarro .linkcarro:hover img:last-child{
+    display: block;
+    
+}
+
+#menu #Cajacarro .linkcarro:hover img:first-child{
     display: none;
     
 }
