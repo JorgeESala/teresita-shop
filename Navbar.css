@@ -16,8 +16,8 @@ body{
     padding-left: px;
     
 }
-header{
-    background: #B6AFFC;
+.navbar{
+    background: #B6AFFC !important;
     width: 100%;
     display: table;
 }
