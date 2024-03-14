@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to bottom, #FFE3F9, #ffff); margin: 0; height: 100vh;  justify-content: center; align-items: center;
+}
+
+.logo{
+    width: 78px;
+    height: 108px;
+    padding: 8px;
+    float: left;
+    padding-left: px;
+    
+}
+header{
+    background: #B6AFFC;
+    width: 100%;
+    display: table;
+}
+#menu li{
+    list-style: none;
+    float: left;
+    margin-left: 140px;
+    padding-top: 70px;
+}
+#menu li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:"wdth" 75;
+}
+
+#menu li a:hover{
+    color: #B9EFE8;
+    
+}
+#menu #cajabuscador{
+    list-style: none;
+    float: left;
+    margin-left: 140px;
+    padding-top: 60px;
+}
+#menu #lupa {
+    margin-left: 15px;
+    padding-top: 60px;
+}
+#lupa #lupabuscar{
+    width: 35px;
+    height: 35px;
+    
+}
+#buscador{
+    padding: 10px;
+    padding-right: 50px;
+    border: 0;
+    outline: none;
+    border-radius: 15px;
+    border: 0; 
+}
+
+#menu #CajaUsuario{
+    list-style: none;
+    float: left;
+    margin-left: 20px;
+    padding-top:55px;
+}
+
+#menu #CajaUsuario #imgUsuario{
+    width: 40px;
+    height: 40px;
+
+}
+#menu #CajaUsuario #imgUsuario2{
+    width: 40px;
+    height: 40px;
+
+}
+
+#menu #CajaUsuario .linkusuario img:last-child{
+    display: none;
+    
+}
+
+#menu #CajaUsuario .linkusuario:hover img:last-child{
+    display: block;
+    
+}
+
+#menu #CajaUsuario .linkusuario:hover img:first-child{
+    display: none;
+    
+}
+#menu #Cajacarro{
+    list-style: none;
+    float: left;
+    margin-left: 20px;
+    padding-top:55px;
+}
+
+#menu #Cajacarro #imgcarro{
+    width: 40px;
+    height: 40px;
+
+}
+#menu #Cajacarro #imgcarro2{
+    width: 40px;
+    height: 40px;
+
+}
+
+#menu #Cajacarro .linkcarro img:last-child{
+    display: none;
+    
+}
+
+#menu #Cajacarro .linkcarro:hover img:last-child{
+    display: block;
+    
+}
+
+#menu #Cajacarro .linkcarro:hover img:first-child{
+    display: none;
+    
+}
