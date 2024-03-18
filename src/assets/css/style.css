@@ -1,8 +1,10 @@
-
 /* El fondo que use usa en los textos  */
 .text-element {
-    background-color: #FFCBC6;
+  background-color: #ffcbc6;
 }
-.text-element:focus{
-    background-color: #FFCBC6;
+.text-element:focus {
+  background-color: #ffcbc6;
+}
+textarea {
+    resize: none;
 }
