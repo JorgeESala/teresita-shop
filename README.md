@@ -4,3 +4,5 @@ los personajes más atractivos, mochilas personalizadas, figuras armables, entre
 articulos para el agrado del cliente.
 En la cual podra pedir sus articulos para una entrega mas agil y sin necesidad de acudir
 a la tienda fisica para una primera impresión.
+
+https://teresita-shop.netlify.app/nosotros.html
