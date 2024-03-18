@@ -1,0 +1,10 @@
+# No permitir la carpeta node_modules
+node_modules
+
+# No permitir archivos de ios
+.Ds_Store
+
+# No permitir videos 
+.avi
+.mkv
+.mp4
