@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #ffe3f9, #ffff);
+  margin: 0;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+nav {
+  font-size: 100px;
+  font-weight: bold;
+  font-size: larger;
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 75;
+}
+
+nav li a:hover {
+  color: #65F1FF !important;
+}
+
+.logo {
+  width: 78px;
+  height: 108px;
+  padding: 8px;
+}
+.navbar {
+  background: #b6affc !important;
+}
+#lupabuscar {
+  width: 35px;
+  height: 35px;
+}
+
+#imgUsuario2 {
+  width: 40px;
+  height: 40px;
+}
+
+#imgcarro {
+  width: 40px;
+  height: 40px;
+}
+#imgcarro2 {
+  width: 40px;
+  height: 40px;
+}
