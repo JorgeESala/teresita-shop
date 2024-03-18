@@ -13,5 +13,11 @@ p{
 }
 
 .btn-primary{
-    
+    color: #A66CFF;
+    background-color: #B3E0FF;
+}
+
+.btn-primary:hover{
+    color: #B3E0FF;
+    background-color: #A66CFF;
 }
