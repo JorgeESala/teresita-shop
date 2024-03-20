@@ -1,4 +1,8 @@
+
+
 const submitButton = document.getElementById("enviar");
+
+// Se le agrega la función de validar datos al botón de enviar
 submitButton.addEventListener("click", (e) => {
     e.preventDefault();
     document.getElementById("error-message").innerHTML = "";
@@ -6,10 +10,11 @@ submitButton.addEventListener("click", (e) => {
     const email =  document.getElementById("email").value;
     const message =  document.getElementById("message").value;
     if(isValidEmail(email) && !isEmpty(name) && !isEmpty(message)){
-        submitButton.submit();
+        document.getElementById("contact-form").submit();
     }
 });
 
+// Valida el campo email
 function isValidEmail(email){
     const regex = /\S+@\S+\.\S+/;
     const isValidEmail = regex.test(email)
@@ -18,6 +23,7 @@ function isValidEmail(email){
     }
     return isValidEmail;
 }
+// Valida que no haya un campo vacio
 function isEmpty(value){
     const isEmptyString = value == "";
     if(isEmptyString){
@@ -26,6 +32,7 @@ function isEmpty(value){
     return isEmptyString;
 }
 
+// Agrega el mensaje de error en la parte posterior de la pantalla
 function printError(error){
     const errorList = document.getElementById("error-message");
     errorList.innerHTML += `<li>${error}</li>`;
