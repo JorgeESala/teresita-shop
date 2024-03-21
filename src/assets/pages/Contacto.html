@@ -9,6 +9,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/Navbar.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contactos.css">
 </head>
 </head>
 
@@ -86,7 +87,7 @@
 
         <!-- Formulario de contacto -->
         <div class="row">
-            <form id="contact-form" netlify class="col-6">
+            <form netlify class="col-xs-2 col-sm-4 col-md-6">
                 <div class="mb-3">
 
                     <label for="name" class="form-label">Nombre</label>
@@ -102,24 +103,22 @@
                     <textarea rows="3" name="message" type="textarea" class="form-control text-element"
                         id="message"></textarea>
                 </div>
-                <button id="enviar" type="submit" class="btn btn-primary">Enviar</button>
-                
+                <button id="enviar" type="submit" class="btn btn-primary mb-3">Enviar</button>
             </form>
             <div class="separador col-1"></div>
 
             <!-- Redes sociales y horario de atención -->
-            <section class="col-xs-2 col-sm-6 col-md-4 text-element text-center">
+            <section class="col-xs-2 col-sm-3 col-md-4 text-element text-center">
                 <h2 class="text-center">Redes Sociales</h2>
-                <h3><a href="https://www.facebook.com/teresitakawai">Facebook<img src="../img/facebook.png"
-                            width="50px" height="50px" alt="facebook"></a></h3>
-                <h3><a href="#">Whatsapp <img src="../img/whatsapp.png" width="50px" height="50px" alt="whatsapp"></a>
-                </h3>
-
+                <h3><a href="https://www.facebook.com/teresitakawai">Facebook  <img src="../img/facebook.png" width="50px" height="50px" alt="facebook"></a></h3>
+                <h3><a href="#">Whatsapp <img src="../img/whatsapp.png" width="50px" height="50px" alt="whatsapp"></a></h3>
+                
                 <h2>Horario de atención</h2>
                 <p>Lunes a sábado</p>
                 <p>11 am a 3:30 pm</p>
                 <p>6 pm a 10 pm</p>
             </section>
+            
             <ul class="text-bg-warning rounded-1" id="error-message">
 
             </ul>
