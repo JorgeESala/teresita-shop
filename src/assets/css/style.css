@@ -9,3 +9,12 @@
 textarea {
   resize: none;
 }
+.redes-sociales {
+  margin-top: 20px; /* Agrega margen superior en todos los tamaños de pantalla */
+}
+
+@media (min-width: 992px) {
+  .redes-sociales {
+      margin-left: 80px; /* Mantiene el margen izquierdo solo en dispositivos grandes */
+  }
+}
