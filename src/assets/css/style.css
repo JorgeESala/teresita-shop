@@ -9,3 +9,31 @@
 textarea {
   resize: none;
 }
+
+.submit{
+  padding-left: 12px;
+}
+/* breakpoint medium */
+@media (min-width: 768px){
+ 
+  .product-form{
+    max-width:60%;
+  } 
+
+}
+
+@media (min-width: 1140px){
+ 
+  .product-form{
+    max-width:50%;
+  } 
+
+}
+
+@media (min-width: 1320px){
+ 
+  .product-form{
+    max-width:35%;
+  } 
+
+}
