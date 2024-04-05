@@ -46,19 +46,26 @@ function actualizarListado() {
     } else {
         listadoPublicaciones.forEach((item, index) => {//Mostrar tarjeta del objeto
             const itemHTML = `
-                    <div class="card" style="width: 18rem;">
-                        <img src="${item.img}" class="card-img-top" alt="image">
-                        <div class="card-body">
-                            <h5 class="card-title">${item.name}</h5>
-                            <p class="card-text">${item.description}</p>
-                            <p class="card-text">${item.quantity}</p>
-                            <p class="card-text">${item.price}</p>
-                            <p class="card-text">${item.category}</p>
-                            <button type="button" onclick="eliminarPublicacion(${index})">Eliminar</button>
-                            <button type="button" onclick="modificarPublicacion(${index})">Modificar</button>
-                        </div>
-                    </div>
-                    <br/>
+                    <div class="col-3 text-center">
+        <div class="card text-center card" style="width: 18rem">
+          <img src="${item.img}" class="mx-auto card-img-top text-center" alt="${item.description}" />
+          <div class="card-body">
+            <h5 class="card-title">${item.name}</h5>
+            <p class="card-text">${item.description}</p>
+            <p class="card-text">${item.price}</p>
+            <p class="card-text">Disponibles: ${item.quantity}</p>
+            <p class="card-text">${item.category}</p>
+            <div class="quantity-control container-fluid">
+              <div class="row justify-content-center mb-3">
+                <input id="1" value="0" class="col-3" type="number" min="0" max="$1" />
+              </div>
+            </div>
+            <button href="#" class="btn btn-primary">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
                 `;
             itemsContainer.innerHTML += itemHTML;
         });
