@@ -2,7 +2,7 @@
 let listadoPublicaciones = [];
 
 cargarDatos();
-
+crearDatos();
 document.getElementById("newItemForm").addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -35,6 +35,7 @@ document.getElementById("newItemForm").addEventListener('submit', (event) => {
     actualizarListado();
 });
 
+
 // Actualizar el listado de publicaciones
 function actualizarListado() {
     const itemsContainer = document.getElementById("list-items");
@@ -46,8 +47,8 @@ function actualizarListado() {
     } else {
         listadoPublicaciones.forEach((item, index) => {//Mostrar tarjeta del objeto
             const itemHTML = `
-                    <div class="col-3 text-center">
-        <div class="card text-center card" style="width: 18rem">
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 justify-content-center">
+        <div class="card text-center mx-auto" style="width: 18rem">
           <img src="${item.img}" class="mx-auto card-img-top text-center" alt="${item.description}" />
           <div class="card-body">
             <h5 class="card-title">${item.name}</h5>
@@ -133,4 +134,101 @@ function limpiarListado() {
 
     // Establecer su contenido en vacío
     itemsContainer.innerHTML = "";
+}
+function crearDatos(){
+    const itemList = [];
+    itemList.push( {
+        name: "Gorry Luffy",
+        description: "Gorro para adulto",
+        img: "../img/Gorro Luffy.jpg",
+        price: "100",
+        quantity: 3,
+        category: "One piece"
+    });
+
+    itemList.push( {
+        name: "Gorry Chopper",
+        description: "Gorro infantil del personaje Chopper",
+        img: "../img/Gorro Chopper.jpg",
+        price: "140",
+        quantity: 3,
+        category: "One piece"
+    });
+
+    itemList.push( {
+        name: "Gorry Ace",
+        description: "Gorro para adulto del personaje Ace",
+        img: "../img/Gorro Ace.jpg",
+        price: "140",
+        quantity: 3,
+        category: "One piece"
+    });
+
+    itemList.push( {
+        name: "Juguete Iron Man",
+        description: "Juguete lanza discos de iron man",
+        img: "../img/Juguete iron man.jpg",
+        price: "70",
+        quantity: 1,
+        category: "Marvel"
+    });
+
+    itemList.push( {
+        name: "Monedero de naruto",
+        description: "Monedero que usa naruto en el ánime",
+        img: "../img/Monedero naruto.jpg",
+        price: "100",
+        quantity: 3,
+        category: "Naruto"
+    });
+
+    itemList.push( {
+        name: "Figura pikachu gengar",
+        description: "Figura de pikachu disfrazado de gengar con caja",
+        img: "../img/Pikachu gengar.jpg",
+        price: "270",
+        quantity: 1,
+        category: "Pokemon"
+    });
+
+    itemList.push( {
+        name: "Playera zoro",
+        description: "Playera neón talla Grande",
+        img: "../img/Playera zoro.jpg",
+        price: "200",
+        quantity: 1,
+        category: "One piece"
+    });
+
+    itemList.push( {
+        name: "Playera pokemon",
+        description: "Playera neón talla chica",
+        img: "../img/Playera pokemon.jpg",
+        price: "200",
+        quantity: 1,
+        category: "Pokemon"
+    });
+
+    itemList.push( {
+        name: "Rosa amarilla armable",
+        description: "Rosa armable tipo lego",
+        img: "../img/Rosa amarilla armable.jpg",
+        price: "120",
+        quantity: 3,
+        category: "Armable lego block"
+    });
+
+    itemList.push( {
+        name: "Cartera kuromi",
+        description: "Cartera de 30 x 15 cm",
+        img: "../img/Cartera kuromi.jpg",
+        price: "100",
+        quantity: 1,
+        category: "Kuromi San Rio"
+    });
+
+    for(const item of itemList){
+        listadoPublicaciones.push(item);
+    }
+    actualizarListado();
 }
