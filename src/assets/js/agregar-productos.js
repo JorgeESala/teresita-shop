@@ -2,7 +2,10 @@
 let listadoPublicaciones = [];
 
 cargarDatos();
-crearDatos();
+if(!localStorage.getItem("publicaciones")){
+    crearDatos();
+}
+
 document.getElementById("newItemForm").addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -39,12 +42,17 @@ document.getElementById("newItemForm").addEventListener('submit', (event) => {
 // Actualizar el listado de publicaciones
 function actualizarListado() {
     const itemsContainer = document.getElementById("list-items");
+    const image = "";
     itemsContainer.innerHTML = ""; // Limpiar el contenedor antes de agregar elementos
 
     if (listadoPublicaciones.length === 0) {
         // Mostrar un mensaje si no hay publicaciones
         itemsContainer.innerHTML = "<p>No hay publicaciones.</p>";
     } else {
+
+    // Verificar si se seleccionó un archivo
+
+
         listadoPublicaciones.forEach((item, index) => {//Mostrar tarjeta del objeto
             const itemHTML = `
                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 justify-content-center">
@@ -231,4 +239,22 @@ function crearDatos(){
         listadoPublicaciones.push(item);
     }
     actualizarListado();
+}
+
+function handleFileUpload() {
+    const fileInput = document.getElementById("newItemImage");
+
+    // Verificar si se seleccionó un archivo
+    if (fileInput.files && fileInput.files[0]) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            const itemsContainer = document.getElementById("list-items");
+            const itemHTML = `<img src="${e.target.result}" class="mx-auto card-img-top text-center" alt="Imagen" />`;
+            itemsContainer.innerHTML += itemHTML;
+        }
+
+        // Leer el contenido del archivo como una URL de datos
+        reader.readAsDataURL(fileInput.files[0]);
+    }
 }

@@ -136,15 +136,17 @@
 
 
                 </div>
-                <div class="row justify-content-start submit">
-                    <button class="btn btn-success" type="submit" class="col-auto btn btn-primary">Crear</button>
+                <div class="row justify-content-around submit">
+                    <button class="col-auto btn btn-primary" type="submit" class="col-auto btn btn-primary">Crear</button>
+                    <button class="col-auto btn btn-success" onclick="mostrarJSON()">Mostrar JSON</button>
+                    <button class="col-auto btn btn-danger" onclick="limpiarListado()">Eliminar todo</button>
                 </div>
             </form>
             <div>
-                <button class="btn btn-danger" onclick="limpiarListado()">Eliminar todo</button>
+                
             </div>
             <div>
-                <button onclick="mostrarJSON()">Mostrar JSON</button>
+                
             </div>
             <div id="listado" hidden></div>
             
