@@ -72,6 +72,12 @@ function actualizarListado() {
             <button href="#" class="btn btn-primary">
               Agregar al carrito
             </button>
+            <button href="#" onclick="eliminarPublicacion(${index})" class="btn btn-primary">
+            Eliminar
+            </button>
+            <button href="#" onclick="modificarPublicacion(${index})" class="btn btn-primary">
+            Modificar
+            </button>
           </div>
         </div>
       </div>
