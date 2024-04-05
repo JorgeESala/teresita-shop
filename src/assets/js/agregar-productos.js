@@ -72,10 +72,10 @@ function actualizarListado() {
             <button href="#" class="btn btn-primary">
               Agregar al carrito
             </button>
-            <button href="#" onclick="eliminarPublicacion(${index})" class="btn btn-primary">
+            <button href="#" onclick="eliminarPublicacion(${index})" class="btn btn-danger">
             Eliminar
             </button>
-            <button href="#" onclick="modificarPublicacion(${index})" class="btn btn-primary">
+            <button href="#" onclick="modificarPublicacion(${index})" class="btn btn-success">
             Modificar
             </button>
           </div>
@@ -102,7 +102,6 @@ function modificarPublicacion(index) {
     // Rellenar el formulario con los datos del elemento
     document.getElementById("newItemName").value = item.name;
     document.getElementById("newItemDescription").value = item.description;
-    document.getElementById("newItemImage").value = item.img;
     document.getElementById("newItemPrice").value = item.price;
     document.getElementById("newItemQuantity").value = item.quantity;
     document.getElementById("newItemCategory").value = item.category;
