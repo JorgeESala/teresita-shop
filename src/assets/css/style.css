@@ -37,3 +37,9 @@ textarea {
   } 
 
 }
+#category-list{
+  max-width: 20%;
+}
+#main-section{
+  max-width: 70%;
+}
