@@ -9,7 +9,10 @@
 textarea {
   resize: none;
 }
-
+.button{
+  background-color: #B3E0FF;
+  color: #A66CFF;
+}
 .submit{
   padding-left: 12px;
 }
