@@ -39,7 +39,7 @@
 }
 
 .view p {
-    font-family: Georgia, serif;
+    font-family: 'Jost', sans-serif;
     font-style: italic;
     font-size: 12px;
     position: relative;
@@ -101,4 +101,12 @@
 .view-on:hover a.info { 
 	transform: translateY(0px);
 	transition-delay: 0.3s;
+}
+
+.font {
+    font-family: 'Jost', sans-serif;
+}
+
+.font2 {
+    font-family: 'Fredoka', sans-serif;
 }
