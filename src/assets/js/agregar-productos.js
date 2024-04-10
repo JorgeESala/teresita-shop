@@ -59,23 +59,23 @@ function actualizarListado() {
         <div class="card text-center mx-auto" style="width: 18rem">
           <img src="${item.img}" class="mx-auto card-img-top text-center" alt="${item.description}" />
           <div class="card-body">
-            <h5 class="card-title">${item.name}</h5>
-            <p class="card-text">${item.description}</p>
-            <p class="card-text">${item.price}</p>
-            <p class="card-text">Disponibles: ${item.quantity}</p>
-            <p class="card-text">${item.category}</p>
+            <h5 class="card-title subtitle">${item.name}</h5>
+            <p class="card-text paragraph">${item.description}</p>
+            <p class="card-text paragraph">${item.price}</p>
+            <p class="card-text paragraph">Disponibles: ${item.quantity}</p>
+            <p class="card-text paragraph">${item.category}</p>
             <div class="quantity-control container-fluid">
               <div class="row justify-content-center mb-3">
-                <input id="1" value="0" class="col-3" type="number" min="0" max="$1" />
+                <input id="1" value="0" class="col-3 paragraph" type="number" min="0" max="$1" />
               </div>
             </div>
-            <button href="#" class="btn btn-primary">
+            <button href="#" class="btn btn-primary button">
               Agregar al carrito
             </button>
-            <button href="#" onclick="eliminarPublicacion(${index})" class="btn btn-danger">
+            <button href="#" onclick="eliminarPublicacion(${index})" class="btn btn-danger button">
             Eliminar
             </button>
-            <button href="#" onclick="modificarPublicacion(${index})" class="btn btn-success">
+            <button href="#" onclick="modificarPublicacion(${index})" class="btn btn-success button">
             Modificar
             </button>
           </div>

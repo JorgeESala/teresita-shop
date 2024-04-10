@@ -1,6 +1,12 @@
 :root{
   --color-rosa-fondo: #ffcbc6;
   --color-morado-bajo: #B6AFFC;
+  --main-text-font: 'Fredoka', sans-serif;
+  --secondary-text-font: 'Jost', sans-serif;
+  --title-size: 45px;
+  --subtitle-size: 30px;
+  --paragraph-size: 17px;
+  --button-size: 14px
 }
 * {
   padding: 0;
@@ -19,7 +25,13 @@
 textarea {
   resize: none;
 }
-
+.button{
+  background-color: #B3E0FF;
+  color: #A66CFF;
+  font-size: var(--button-size);
+  font-family: var(--secondary-text-font);
+  font-optical-sizing: auto;
+}
 .submit{
   padding-left: 12px;
 }
@@ -78,3 +90,20 @@ textarea {
 .right-section{
   margin-right: 20%;
 }
+
+.title{
+  font-size: var(--title-size);
+  font-family: var(--main-text-font);
+  font-optical-sizing: auto;
+}
+.subtitle{
+  font-size: var(--subtitle-size);
+  font-family: var(--main-text-font);
+  font-optical-sizing: auto;
+}
+.paragraph{
+  font-size: var(--paragraph-size);
+  font-family: var(--secondary-text-font);
+  font-optical-sizing: auto;
+}
+
