@@ -107,3 +107,9 @@ textarea {
   font-optical-sizing: auto;
 }
 
+#icono-teresita{
+  max-height: 150px;
+}
+footer{
+  background-color: var(--color-morado-bajo);
+}
