@@ -8,7 +8,6 @@ if(!localStorage.getItem("publicaciones")){
 
 document.getElementById("newItemForm").addEventListener('submit', (event) => {
     event.preventDefault();
-
     // Obtener los valores del formulario
     const newItemName = document.getElementById("newItemName").value;
     const newItemDescription = document.getElementById("newItemDescription").value;
