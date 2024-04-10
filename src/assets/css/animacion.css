@@ -12,7 +12,7 @@
     background: #fff
 }
 
-.view .mask{
+.view .mask {
     width: 250px;
     height: 300px;
     position: absolute;
@@ -63,50 +63,77 @@
 }
 
 .view-on .mask {
-	background-color: rgba(0,0,0,0.6);
-	opacity: 0;
-	transform: translate(460px, -100px) rotate(180deg);
-	transition: all 0.2s 0.4s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transform: translate(460px, -100px) rotate(180deg);
+    transition: all 0.2s 0.4s ease-in-out;
 }
 
-.view-on h2{
-	transform: translateY(-100px);
-	transition: all 0.2s ease-in-out;
+.view-on h2 {
+    transform: translateY(-100px);
+    transition: all 0.2s ease-in-out;
 }
 
-.view-on p { 
-	transform: translateX(300px) rotate(90deg);
-	transition: all 0.2s ease-in-out;
+.view-on p {
+    transform: translateX(300px) rotate(90deg);
+    transition: all 0.2s ease-in-out;
 }
 
-.view-on a.info { 
-	transform: translateY(-200px);
-	transition: all 0.2s ease-in-out;
-} 
-
-.view-on:hover .mask { 
-	opacity:1; 
-	transition-delay: 0s;							 
-	transform: translate(0px, 0px);
+.view-on a.info {
+    transform: translateY(-200px);
+    transition: all 0.2s ease-in-out;
 }
 
-.view-on:hover h2 { 
-	transform: translateY(0px); 
-	transition-delay: 0.5s; 
+.view-on:hover .mask {
+    opacity: 1;
+    transition-delay: 0s;
+    transform: translate(0px, 0px);
 }
-.view-on:hover p	{ 
+
+.view-on:hover h2 {
+    transform: translateY(0px);
+    transition-delay: 0.5s;
+}
+
+.view-on:hover p {
     transform: translateX(0px) rotate(0deg);
-	transition-delay: 0.4s;
-}
-.view-on:hover a.info { 
-	transform: translateY(0px);
-	transition-delay: 0.3s;
+    transition-delay: 0.4s;
 }
 
-.font {
-    font-family: 'Jost', sans-serif;
+.view-on:hover a.info {
+    transform: translateY(0px);
+    transition-delay: 0.3s;
 }
 
-.font2 {
-    font-family: 'Fredoka', sans-serif;
+:root {
+    --main-text-font: 'Fredoka', sans-serif;
+    --secondary-text-font: 'Jost', sans-serif;
+    --title-size: 45px;
+    --subtitle-size: 30px;
+    --paragraph-size: 17px;
+    --button-size: 14px
+}
+
+.title {
+    font-size: var(--title-size);
+    font-family: var(--main-text-font);
+    font-optical-sizing: auto;
+}
+
+.subtitle {
+    font-size: var(--subtitle-size);
+    font-family: var(--main-text-font);
+    font-optical-sizing: auto;
+}
+
+.paragraph {
+    font-size: var(--paragraph-size);
+    font-family: var(--secondary-text-font);
+    font-optical-sizing: auto;
+}
+
+.button {
+    font-size: var(--button-size);
+    font-family: var(--secondary-text-font);
+    font-optical-sizing: auto;
 }

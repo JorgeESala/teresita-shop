@@ -83,14 +83,14 @@
     </header>
     <main>
         <div class="text-center">
-            <h1 class="font2"> Productos </h1>
+            <h1 class="title"> Productos </h1>
 
             <form class="container-md product-form text-start" id="newItemForm">
 
                 <div class="mb-3 row justify-content-center">
                     <div class="col-sm-12">
                         <div class="input-group ">
-                            <span class="input-group-text font" id="basic-addon1">Nombre</span>
+                            <span class="input-group-text paragraph" id="basic-addon1">Nombre</span>
                             <input type="text" class="form-control" id="newItemName">
                         </div>
                     </div>
@@ -99,7 +99,7 @@
                 <div class="mb-3 row justify-content-center">
                     <div class="col-sm-12">
                         <div class="input-group ">
-                            <span class="input-group-text font">Descripción</span>
+                            <span class="input-group-text paragraph">Descripción</span>
                             <textarea class="form-control" id="newItemDescription"> </textarea>
                         </div>
                     </div>
@@ -108,7 +108,7 @@
                 <div class="mb-3 row justify-content-center">
                     <div class="col-sm-12">
                         <div class="input-group ">
-                            <span class="input-group-text font" id="basic-addon1">Precio</span>
+                            <span class="input-group-text paragraph" id="basic-addon1">Precio</span>
                             <input type="number" class="form-control" id="newItemPrice">
                         </div>
                     </div>
@@ -117,7 +117,7 @@
                 <div class="mb-3 row justify-content-center">
                     <div class="col-sm-12">
                         <div class="input-group ">
-                            <span class="input-group-text font" id="basic-addon1">Cantidad</span>
+                            <span class="input-group-text paragraph" id="basic-addon1">Cantidad</span>
                             <input type="number" class="form-control" id="newItemQuantity">
                         </div>
                     </div>
@@ -126,7 +126,7 @@
                 <div class="mb-3 row justify-content-center">
                     <div class="col-sm-12">
                         <div class="input-group ">
-                            <span class="input-group-text font" id="basic-addon1">Categoría</span>
+                            <span class="input-group-text paragraph" id="basic-addon1">Categoría</span>
                             <input type="text" class="form-control" id="newItemCategory">
                         </div>
                     </div>
@@ -135,7 +135,7 @@
                 <div class="row mb-3 justify-content-center">
                     <div class="col-sm-12">
                         <div class="input-group">
-                            <label for="product-image" class="input-group-text font">Foto</label>
+                            <label for="product-image" class="input-group-text paragraph">Foto</label>
                             <input class="form-control" type="file" id="newItemImage">
                         </div>
                     </div>
@@ -143,9 +143,9 @@
 
                 </div>
                 <div class="row justify-content-around submit">
-                    <button class="col-auto btn btn-primary font" type="submit" onclick="return newItemForm()">Crear</button>
-                    <button class="col-auto btn btn-success font" onclick="mostrarJSON()">Mostrar JSON</button>
-                    <button class="col-auto btn btn-danger font" onclick="limpiarListado()">Eliminar todo</button>
+                    <button class="col-auto btn btn-primary button" type="submit" onclick="return newItemForm()">Crear</button>
+                    <button class="col-auto btn btn-success button" onclick="mostrarJSON()">Mostrar JSON</button>
+                    <button class="col-auto btn btn-danger button" onclick="limpiarListado()">Eliminar todo</button>
                 </div>
             </form>
             <div id="alertPlaceholder" class="row mb-3 justify-content-center"></div>

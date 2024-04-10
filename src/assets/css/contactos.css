@@ -1,20 +1,18 @@
 h2{
-    font-size: 30px;
     font-weight: bold;
     font-optical-sizing: auto;
 
 }
 h3{
-    font-size: 20px;
     font-optical-sizing: auto;
-
 }
+
 a{
 text-decoration: none;
 color: black;
 }
+
 p{
-    font-size: 17px;
     font-optical-sizing: auto;
 }
 
@@ -26,13 +24,4 @@ p{
 .btn-primary:hover{
     color: #B3E0FF;
     background-color: #A66CFF;
-}
-.font {
-    font-family: 'Jost', sans-serif;
-    font-optical-sizing: auto;
-}
-
-.font2 {
-    font-family: 'Fredoka', sans-serif;
-    font-optical-sizing: auto;
 }

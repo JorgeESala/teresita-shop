@@ -12,6 +12,9 @@ textarea {
 .button{
   background-color: #B3E0FF;
   color: #A66CFF;
+  font-size: var(--button-size);
+  font-family: var(--secondary-text-font);
+  font-optical-sizing: auto;
 }
 .submit{
   padding-left: 12px;
@@ -41,10 +44,29 @@ textarea {
 
 }
 
-.font {
-  font-family: 'Jost', sans-serif;
+:root{
+  --main-text-font: 'Fredoka', sans-serif;
+  --secondary-text-font: 'Jost', sans-serif;
+  --title-size: 45px;
+  --subtitle-size: 30px;
+  --paragraph-size: 17px;
+  --button-size: 14px
+
 }
 
-.font2 {
-  font-family: 'Fredoka', sans-serif;
+.title{
+  font-size: var(--title-size);
+  font-family: var(--main-text-font);
+  font-optical-sizing: auto;
 }
+.subtitle{
+  font-size: var(--subtitle-size);
+  font-family: var(--main-text-font);
+  font-optical-sizing: auto;
+}
+.paragraph{
+  font-size: var(--paragraph-size);
+  font-family: var(--secondary-text-font);
+  font-optical-sizing: auto;
+}
+
