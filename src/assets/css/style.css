@@ -1,9 +1,25 @@
+:root{
+  --color-rosa-fondo: #ffcbc6;
+  --color-morado-bajo: #B6AFFC;
+  --main-text-font: 'Fredoka', sans-serif;
+  --secondary-text-font: 'Jost', sans-serif;
+  --title-size: 45px;
+  --subtitle-size: 30px;
+  --paragraph-size: 17px;
+  --button-size: 14px
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 /* El fondo que use usa en los textos  */
 .text-element {
-  background-color: #ffcbc6;
+    background-color: var(--color-rosa-fondo);
 }
 .text-element:focus {
-  background-color: #ffcbc6;
+  background-color: var(--color-rosa-fondo);
 }
 
 textarea {
@@ -19,6 +35,7 @@ textarea {
 .submit{
   padding-left: 12px;
 }
+
 /* breakpoint medium */
 @media (min-width: 768px){
  
@@ -44,14 +61,34 @@ textarea {
 
 }
 
-:root{
-  --main-text-font: 'Fredoka', sans-serif;
-  --secondary-text-font: 'Jost', sans-serif;
-  --title-size: 45px;
-  --subtitle-size: 30px;
-  --paragraph-size: 17px;
-  --button-size: 14px
+#category-list{
+  background-color: var(--color-rosa-fondo);
+  color: black;
+  width: 250px;
+}
 
+
+.round-border{
+    border: solid 1px black;
+    border-radius: 30px;
+} 
+/* .carousel-inner{
+  width: 700px;
+  height: 300px;
+} */
+/* .carousel-item img{
+  max-width: 700px;
+  max-height: 300px;
+}
+*/
+.carousel{
+  width: 80%;
+}
+.separador{
+  background-color: var(--color-rosa-fondo);
+}
+.right-section{
+  margin-right: 20%;
 }
 
 .title{
