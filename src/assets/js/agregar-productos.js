@@ -55,7 +55,7 @@ function actualizarListado() {
         listadoPublicaciones.forEach((item, index) => {//Mostrar tarjeta del objeto
             const itemHTML = `
                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 justify-content-center">
-        <div class="card text-center mx-auto" style="width: 18rem">
+        <div class="card text-center mx-auto" >
           <img src="${item.img}" class="mx-auto card-img-top text-center" alt="${item.description}" />
           <div class="card-body">
             <h5 class="card-title subtitle">${item.name}</h5>
@@ -65,7 +65,7 @@ function actualizarListado() {
             <p class="card-text paragraph">${item.category}</p>
             <div class="quantity-control container-fluid">
               <div class="row justify-content-center mb-3">
-                <input id="1" value="0" class="col-3 paragraph" type="number" min="0" max="$1" />
+                <input id="1" value="0" class="col-3 paragraph" type="number" min="0" max="${item.quantity}" />
               </div>
             </div>
             <button href="#" class="btn btn-primary button">

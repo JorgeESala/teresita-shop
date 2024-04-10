@@ -74,6 +74,7 @@ textarea {
   background-color: var(--color-rosa-fondo);
   color: black;
   width: 250px;
+  font-size: 20px;
 }
 
 
