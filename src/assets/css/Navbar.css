@@ -1,16 +1,12 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+
 
 body {
   background: linear-gradient(to bottom, #ffe3f9, #ffff);
   margin: 0;
-  height: 100vh;
   justify-content: center;
   align-items: center;
 }
+
 nav {
   font-size: 100px;
   font-weight: bold;

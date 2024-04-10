@@ -1,9 +1,19 @@
+:root{
+  --color-rosa-fondo: #ffcbc6;
+  --color-morado-bajo: #B6AFFC;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 /* El fondo que use usa en los textos  */
 .text-element {
-  background-color: #ffcbc6;
+    background-color: var(--color-rosa-fondo);
 }
 .text-element:focus {
-  background-color: #ffcbc6;
+  background-color: var(--color-rosa-fondo);
 }
 
 textarea {
@@ -13,6 +23,7 @@ textarea {
 .submit{
   padding-left: 12px;
 }
+
 /* breakpoint medium */
 @media (min-width: 768px){
  
@@ -37,9 +48,33 @@ textarea {
   } 
 
 }
+
 #category-list{
-  max-width: 20%;
+  background-color: var(--color-rosa-fondo);
+  color: black;
+  width: 250px;
 }
-#main-section{
-  max-width: 70%;
+
+
+.round-border{
+    border: solid 1px black;
+    border-radius: 30px;
+} 
+/* .carousel-inner{
+  width: 700px;
+  height: 300px;
+} */
+/* .carousel-item img{
+  max-width: 700px;
+  max-height: 300px;
+}
+*/
+.carousel{
+  width: 80%;
+}
+.separador{
+  background-color: var(--color-rosa-fondo);
+}
+.right-section{
+  margin-right: 20%;
 }
