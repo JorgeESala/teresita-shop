@@ -1,15 +1,18 @@
 h2{
-    font-size: 40px;
     font-weight: bold;
     font-optical-sizing: auto;
 
 }
+h3{
+    font-optical-sizing: auto;
+}
+
 a{
-text-decoration: none;
 color: black;
 }
+
 p{
-    font-size: 20px;
+    font-optical-sizing: auto;
 }
 
 .btn-primary{
@@ -21,6 +24,7 @@ p{
     color: #B3E0FF;
     background-color: #A66CFF;
 }
+<<<<<<< HEAD
 
 .link-color:hover{
     color:#ff0597;
@@ -44,3 +48,5 @@ p{
             order: -3; /* Cambiar el orden para que aparezca después */
         }
     }
+=======
+>>>>>>> main
