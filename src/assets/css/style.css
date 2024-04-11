@@ -9,6 +9,7 @@
 textarea {
   resize: none;
 }
+<<<<<<< HEAD
 .redes-sociales {
   margin-top: 20px; /* Agrega margen superior en todos los tamaños de pantalla */
 }
@@ -17,4 +18,36 @@ textarea {
   .redes-sociales {
       margin-left: 80px; /* Mantiene el margen izquierdo solo en dispositivos grandes */
   }
+=======
+.button{
+  background-color: #B3E0FF;
+  color: #A66CFF;
+}
+.submit{
+  padding-left: 12px;
+}
+/* breakpoint medium */
+@media (min-width: 768px){
+ 
+  .product-form{
+    max-width:60%;
+  } 
+
+}
+
+@media (min-width: 1140px){
+ 
+  .product-form{
+    max-width:50%;
+  } 
+
+}
+
+@media (min-width: 1320px){
+ 
+  .product-form{
+    max-width:35%;
+  } 
+
+>>>>>>> 382db2c20fae980301c19ea96a77244614086423
 }
