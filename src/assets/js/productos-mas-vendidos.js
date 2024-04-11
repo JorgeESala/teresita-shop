@@ -6,41 +6,11 @@ if(!localStorage.getItem("publicaciones")){
     crearDatos();
 }
 
-document.getElementById("newItemForm").addEventListener('submit', (event) => {
-    event.preventDefault();
-    // Obtener los valores del formulario
-    const newItemName = document.getElementById("newItemName").value;
-    const newItemDescription = document.getElementById("newItemDescription").value;
-    const newItemImage = document.getElementById("newItemImage").value;
-    const newItemPrice = document.getElementById("newItemPrice").value;
-    const newItemQuantity = document.getElementById("newItemQuantity").value;
-    const newItemCategory = document.getElementById("newItemCategory").value;
-
-    // Crear un objeto de publicación y agregarlo al array
-    const newItem = {
-        name: newItemName,
-        description: newItemDescription,
-        img: newItemImage,
-        price: newItemPrice,
-        quantity: newItemQuantity,
-        category: newItemCategory
-    };
-    listadoPublicaciones.push(newItem);
-
-    // Limpiar formulario
-    document.getElementById("newItemForm").reset();
-
-    // Almacenar en el localstorage
-    localStorage.setItem("publicaciones", JSON.stringify(listadoPublicaciones));
-
-    // Actualizar el listado
-    actualizarListado();
-});
 
 
 // Actualizar el listado de publicaciones
 function actualizarListado() {
-    const itemsContainer = document.getElementById("list-items");
+    const itemsContainer = document.getElementById("items-inicio");
     const image = "";
     itemsContainer.innerHTML = ""; // Limpiar el contenedor antes de agregar elementos
 
@@ -54,34 +24,19 @@ function actualizarListado() {
 
         listadoPublicaciones.forEach((item, index) => {//Mostrar tarjeta del objeto
             const itemHTML = `
-                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 justify-content-center">
-        <div class="card text-center mx-auto" >
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 justify-content-center">
+        <div class="card text-center mx-auto" style="width: 18rem">
           <img src="${item.img}" class="mx-auto card-img-top text-center" alt="${item.description}" />
           <div class="card-body">
-            <h5 class="card-title subtitle">${item.name}</h5>
-            <p class="card-text paragraph">${item.description}</p>
-            <p class="card-text paragraph">${item.price}</p>
-            <p class="card-text paragraph">Disponibles: ${item.quantity}</p>
-            <p class="card-text paragraph">${item.category}</p>
-            <div class="quantity-control container-fluid">
-              <div class="row justify-content-center mb-3">
-                <input id="1" value="0" class="col-3 paragraph" type="number" min="0" max="${item.quantity}" />
-              </div>
-            </div>
-            <button href="#" class="btn btn-primary button">
-              Agregar al carrito
-            </button>
-            <button href="#" onclick="eliminarPublicacion(${index})" class="btn btn-danger button">
-            Eliminar
-            </button>
-            <button href="#" onclick="modificarPublicacion(${index})" class="btn btn-success button">
-            Modificar
-            </button>
+            <h5 class="card-title">${item.name}</h5>
+            <p class="card-text">${item.description}</p>
           </div>
         </div>
       </div>
                 `;
             itemsContainer.innerHTML += itemHTML;
+        
+
         });
     }
 }
@@ -142,7 +97,7 @@ function limpiarListado() {
     localStorage.removeItem("publicaciones");
 
     // Obtener el contenedor de las tarjetas
-    const itemsContainer = document.getElementById("list-items");
+    const itemsContainer = document.getElementById("items-inicio");
 
     // Establecer su contenido en vacío
     itemsContainer.innerHTML = "";
@@ -152,7 +107,7 @@ function crearDatos(){
     itemList.push( {
         name: "Gorry Luffy",
         description: "Gorro para adulto",
-        img: "../img/Gorro Luffy.jpg",
+        img: "./src/assets/img/Gorro Luffy.jpg",
         price: "100",
         quantity: 3,
         category: "One piece"
@@ -161,7 +116,7 @@ function crearDatos(){
     itemList.push( {
         name: "Gorry Chopper",
         description: "Gorro infantil del personaje Chopper",
-        img: "../img/Gorro Chopper.jpg",
+        img: "./src/assets/img/Gorro Chopper.jpg",
         price: "140",
         quantity: 3,
         category: "One piece"
@@ -170,7 +125,7 @@ function crearDatos(){
     itemList.push( {
         name: "Gorry Ace",
         description: "Gorro para adulto del personaje Ace",
-        img: "../img/Gorro Ace.jpg",
+        img: "./src/assets/img/Gorro Ace.jpg",
         price: "140",
         quantity: 3,
         category: "One piece"
@@ -179,7 +134,7 @@ function crearDatos(){
     itemList.push( {
         name: "Juguete Iron Man",
         description: "Juguete lanza discos de iron man",
-        img: "../img/Juguete iron man.jpg",
+        img: "./src/assets/img/Juguete iron man.jpg",
         price: "70",
         quantity: 1,
         category: "Marvel"
@@ -188,7 +143,7 @@ function crearDatos(){
     itemList.push( {
         name: "Monedero de naruto",
         description: "Monedero que usa naruto en el ánime",
-        img: "../img/Monedero naruto.jpg",
+        img: "./src/assets/img/Monedero naruto.jpg",
         price: "100",
         quantity: 3,
         category: "Naruto"
@@ -197,7 +152,7 @@ function crearDatos(){
     itemList.push( {
         name: "Figura pikachu gengar",
         description: "Figura de pikachu disfrazado de gengar con caja",
-        img: "../img/Pikachu gengar.jpg",
+        img: "./src/assets/img/Pikachu gengar.jpg",
         price: "270",
         quantity: 1,
         category: "Pokemon"
@@ -206,7 +161,7 @@ function crearDatos(){
     itemList.push( {
         name: "Playera zoro",
         description: "Playera neón talla Grande",
-        img: "../img/Playera zoro.jpg",
+        img: "./src/assets/img/Playera zoro.jpg",
         price: "200",
         quantity: 1,
         category: "One piece"
@@ -215,7 +170,7 @@ function crearDatos(){
     itemList.push( {
         name: "Playera pokemon",
         description: "Playera neón talla chica",
-        img: "../img/Playera pokemon.jpg",
+        img: "./src/assets/img/Playera pokemon.jpg",
         price: "200",
         quantity: 1,
         category: "Pokemon"
@@ -224,7 +179,7 @@ function crearDatos(){
     itemList.push( {
         name: "Rosa amarilla armable",
         description: "Rosa armable tipo lego",
-        img: "../img/Rosa amarilla armable.jpg",
+        img: "./src/assets/img/Rosa amarilla armable.jpg",
         price: "120",
         quantity: 3,
         category: "Armable lego block"
@@ -233,7 +188,7 @@ function crearDatos(){
     itemList.push( {
         name: "Cartera kuromi",
         description: "Cartera de 30 x 15 cm",
-        img: "../img/Cartera kuromi.jpg",
+        img: "./src/assets/img/Cartera kuromi.jpg",
         price: "100",
         quantity: 1,
         category: "Kuromi San Rio"
