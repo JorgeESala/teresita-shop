@@ -83,7 +83,7 @@ textarea {
     border-radius: 30px;
 } 
 .carousel{
-  width: 80%;
+  max-width: 80%;
 }
 .separador-inicio{
   background-color: var(--color-rosa-fondo);
