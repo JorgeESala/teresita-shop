@@ -14,7 +14,10 @@
         href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Kode+Mono:wght@400..700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../css/Navbar.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
@@ -34,7 +37,7 @@
                             <a class="nav-link" aria-current="page" href="/index.html">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link active dropdown-toggle" href="./Productos.html" role="button"
+                            <a class="nav-link dropdown-toggle" href="./Productos.html" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Productos
                             </a>
@@ -82,8 +85,46 @@
         </nav>
     </header>
     <main>
+
+        <div class="container product-form"
+            style="border: 4px solid #B6AFFC; border-radius: 30px; padding: 10px; margin-top: 45px;">
+            <section class="container text-center" style="margin-top: 45px;">
+                <img src="../img/LogoConTitulo.png" id="icono-teresita" alt="">
+                <h1>Inicio de sesión</h1>
+            </section>
+            <!-- Formulario registro -->
+            <form id="loginForm" class="m-5">
+                <div class="row mb-3">
+                    <label for="email-registro" class="form-label ps-0">Correo electrónico</label>
+                    <input type="email" placeholder="example@mail.com" class="form-control" id="email-registro"
+                        aria-describedby="emailHelp" style="width: 100%;" required autofocus>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="pass-registro" class="form-label ps-0">Contraseña</label>
+                    <input type="password" placeholder="example1234" class="form-control" id="pass-registro"
+                        aria-describedby="emailHelp" style="width: 100%;" required>
+                </div>
+
+                <div class="mb-3 form-check d-flex">
+                    <input type="checkbox" class="form-check-input ps-0" id="rememberUserCheck">
+                    <label class="form-check-label ms-1" for="rememberUserCheck">Recordar sesión</label>
+                    <a class="col-auto" style="margin-left:auto;" href="./SignUp.html">Olvide mi contraseña</a>
+                </div>
+                <div class="row">
+                    <button class="btn button btn-custom " type="submit"> <b>Iniciar sesión</b></button>
+                </div>
+                <div class="row justify-content-center text-center">
+                    <p class="col-auto">¿No tienes cuenta?</p>
+                    <a class="col-auto" href="./SignUp.html">Registrarse</a>
+                </div>
+
+
+            </form>
+        </div>
+
     </main>
-    <footer class="bg-ligh tex-dark pt-5 pb-4 mt-4">
+    <footer class="bg-ligh tex-dark pt-5 pb-4 mt-5">
         <div class="container tex-center text-md-start">
             <div class="row text-center text-md-start">
 
@@ -91,16 +132,17 @@
                     <h5 class="text-uppercase mb-4 font-weinght-bold text-primary"> Sobre Nosotros</h5>
                     <hr class="mb-4">
                     <p>
-                        ¡Bienvenido a Teresita! Nos enorgullece ofrecer un destino único para los amantes del ánime y la cultura japonesa.
+                        ¡Bienvenido a Teresita! Nos enorgullece ofrecer un destino único para los amantes del animé y la
+                        cultura japonesa.
                     </p>
 
 
 
                 </div>
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
-                    <h5 class="text-uppercase mb-4 font-weinght-bold text-primary">¡Dejanos Ayudarte!</h5>
+                    <h5 class="text-uppercase mb-4 font-weinght-bold text-primary">¡Déjanos Ayudarte!</h5>
                     <hr class="mb-4">
-                    <p> 
+                    <p>
                         <a href="#" class="tex-dark">Crear Cuenta</a>
                     </p>
                     <p>
@@ -118,7 +160,7 @@
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
                     <h5 class="text-uppercase mb-4 font-weinght-bold text-primary">Términos legales</h5>
                     <hr class="mb-4">
-                    <p> 
+                    <p>
                         <a href="#" class="tex-dark"> Términos y Condiciones </a>
                     </p>
                     <p>
@@ -135,14 +177,14 @@
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
                     <h5 class="text-uppercase mb-4 font-weinght-bold text-primary">¡Contacto!</h5>
                     <hr class="mb-4">
-                    <p> 
+                    <p>
                         <li class="fas fa-home me-3"></li>Felipe Carrillo Puerto, Quintana Roo, México
                     </p>
 
                     <p>
                         <li class="fas fa-envelope me-3"></li>teresitashop@gmail.com
                     </p>
-                    
+
                     <p>
                         <li class="fas fa-phone me-3"></li>9831381485
                     </p>
@@ -164,7 +206,7 @@
                                 <a href="#" class="tex-dark"> <i class="fab fa-youtube"></i></a>
                             </li>
                         </ul>
-    
+
                     </div>
                 </div>
                 <div class="mb-4 text-center">
@@ -182,6 +224,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="../js/Login.js"></script>
 </body>
 
 </html>
