@@ -68,13 +68,13 @@ function actualizarListado() {
                 <input id="1" value="0" class="col-3 paragraph" type="number" min="0" max="${item.quantity}" />
               </div>
             </div>
-            <button href="#" class="btn btn-primary button">
+            <button href="#" class="button">
               Agregar al carrito
             </button>
-            <button href="#" onclick="eliminarPublicacion(${index})" class="btn btn-danger button">
+            <button href="#" onclick="eliminarPublicacion(${index})" class="button">
             Eliminar
             </button>
-            <button href="#" onclick="modificarPublicacion(${index})" class="btn btn-success button">
+            <button href="#" onclick="modificarPublicacion(${index})" class="button mt-1">
             Modificar
             </button>
           </div>

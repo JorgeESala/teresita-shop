@@ -24,15 +24,14 @@ function actualizarListado() {
 
         listadoPublicaciones.forEach((item, index) => {//Mostrar tarjeta del objeto
             const itemHTML = `
-                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 justify-content-center">
-        <div class="card text-center mx-auto" style="width: 18rem">
-          <img src="${item.img}" class="mx-auto card-img-top text-center" alt="${item.description}" />
+                   
+        <div class="card col-sm-12 col-md-6 col-lg-4 col-xl-4 text-center">
+          <img src="${item.img}" class=" card-img-top text-center" alt="${item.description}" />
           <div class="card-body">
-            <h5 class="card-title">${item.name}</h5>
-            <p class="card-text">${item.description}</p>
+            <a href= "#"> <h4 class="card-title">${item.name}</h5></a>
+            <h5 class="card-text">$${item.price}</h4>
           </div>
         </div>
-      </div>
                 `;
             itemsContainer.innerHTML += itemHTML;
         
