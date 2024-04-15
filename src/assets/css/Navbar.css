@@ -1,5 +1,4 @@
 
-
 body {
   background: linear-gradient(to bottom, #ffe3f9, #ffff);
   margin: 0;
@@ -18,7 +17,7 @@ nav {
 }
 
 nav li a:hover {
-  color: #65F1FF !important;
+  color: #ff0597 !important;
 }
 
 .logo {
@@ -46,4 +45,54 @@ nav li a:hover {
 #imgcarro2 {
   width: 40px;
   height: 40px;
+}
+
+
+@media (max-width: 991px) {
+  .logo {
+    width: 58px;
+    height: 80px;
+    margin-left: -10px;
+    margin-top: -10px;
+  }
+  #navbar-icons {
+    width:calc(100% - 60px);
+    
+  }
+}
+
+/* Estilos para dispositivos móviles */
+
+@media (max-width: 1199px) {
+  #navbar-icons {
+    display: flex;
+    justify-content: end;
+    
+  }
+  #searchForm {
+    flex-grow: 1;
+  }
+  
+}
+
+@media (max-width: 991px) {
+  #navbar-icons {
+    width:calc(100% - 80px);
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
+  
+ 
+  
+}
+/* #navbar-icons {
+  min-width: 85px;
+}
+#searchForm {
+  min-width: 90px;
+} */
+.navbar-toggler:focus {
+  box-shadow: none;
 }

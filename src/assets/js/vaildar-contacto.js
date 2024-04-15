@@ -37,3 +37,12 @@ function printError(error){
     const errorList = document.getElementById("error-message");
     errorList.innerHTML += `<li>${error}</li>`;
 }
+
+// Cambiar "redes sociales" por "contacto" en dispositivos móviles
+window.addEventListener('DOMContentLoaded', (event) => {
+    var elementoRS = document.querySelector('.rs');
+    if (window.innerWidth <= 768) {
+      elementoRS.textContent = "Contacto";
+    }
+  });
+  
