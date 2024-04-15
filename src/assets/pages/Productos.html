@@ -18,7 +18,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
-
 <body>
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -77,15 +76,39 @@
             </div>
         </div>
     </nav>
+    <h1 class="title text-center">Productos</h1>
 </header>
-  <main>
-    <section class="container text-center mb-3">
-      <h1 class="title">Productos</h1>
+<main class="d-flex">
+    <section id="show-product" class="w-25 bg-white align-self-lg-start container pt-3 position-sticky">
+        <img src="../img/Gorro Ace.jpg" class="img-fluid" alt="" srcset="">
+        <h4 class="text-center">Gorro de Ace</h4>
+        <p> Gorro para adulto del personaje Ace</p>
+        <p><b>Disponibles: </b> 3</p>
+        <p> <b>Categorias:</b> One piece, Cosplay, Sombrero</p>
+        <hr>
+        <p class="text-center"><b>Cantidad</b></p>
+        <div class="quantity-selector">
+
+            <input id="1" value="0" class="form-control text-center mb-3" type="number" min="0" />
+        </div>
+
+        <button href="#" class="button w-100 mb-3">
+            Agregar al carrito
+          </button>
+          <button href="#" class="button w-100 mb-3">
+            Comprar ahora
+          </button>
+    </section>
+
+    <section class="mb-3 text-center" id="product-container">
       <div class="justify-content-center">
         <div class="row" id="list-items">
         </div>
     </section>
-  </main>
+</main>
+    
+  
+
   <footer class="bg-ligh tex-dark pt-5 pb-4 mt-4">
     <div class="container tex-center text-md-start">
         <div class="row text-center text-md-start">
@@ -182,8 +205,7 @@
         </div>
     </div>
 </footer>
-  <script src="../js/agregar-productos.js"></script>
-  <script src="../js/vaildar-contacto.js"></script>
+  <script src="../js/lista-de-productos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>

@@ -18,6 +18,7 @@
 a {
   font-weight: bold;
   color: black;
+  text-decoration: none;
 }
 a:hover {
   color: var(--color-rosa-fuerte);
@@ -122,8 +123,16 @@ footer {
   background-color: #fde9e7;
 }
 
-    .btn-custom {
-        width: 50%;
-        margin: 0 auto;
-        font-size: 20px;
-    }
+.btn-custom {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+#product-container {
+  width: 70% !important;
+}
+
+#show-product {
+  top: 10%;
+}
