@@ -16,7 +16,9 @@
     <link rel="stylesheet" href="../css/Navbar.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/contactos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 </head>
@@ -29,7 +31,7 @@
                 <img src="../img/LogoConTitulo.png" alt="" class="logo">
 
                 <!-- Contenedor del menú de hamburguesa -->
-                <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse"
+                <button id="navButton" class="navbar-toggler me-2" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -73,21 +75,21 @@
                             <a class="nav-link active" aria-disabled="true" href="./Contacto.html">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <div class="d-flex"> <!-- Agregamos una clase para flexbox -->
-                                <form role="search">
-                                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                                </form>
-                                <!-- <a href="#"><img id='lupabuscar' src="./img/lupa.png" alt="buscar"></a> -->
-                                <a href="./SignUp.html"><img id='imgUsuario2' class="" src="../img/ninja-unscreen.gif"
-                                        alt="Usuario"></a>
-                                <a href="./Carrito.html" class="linkcarro"><img id='imgcarro' src="../img/carro.png"
-                                        alt="Usuario"></a>
-                            </div>
+
                         </li>
                     </ul>
                 </div>
+                <div class="d-flex"> <!-- Agregamos una clase para flexbox -->
+                    <form id="searchForm" role="search">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                    <!-- <a href="#"><img id='lupabuscar' src="./img/lupa.png" alt="buscar"></a> -->
+                    <a href="./SignUp.html"><img id='imgUsuario2' class="" src="../img/ninja-unscreen.gif"
+                            alt="Usuario"></a>
+                    <a href="./Carrito.html" class="linkcarro"><img id='imgcarro' src="../img/carro.png"
+                            alt="Usuario"></a>
+                </div>
 
-                
             </div>
         </nav>
     </header>
@@ -98,37 +100,43 @@
         <!-- Formulario de contacto -->
         <div class="row">
             <form netlify class="col-xs-2 col-sm-4 col-md-6">
-                <div class="mb-3">
+                <div class="mb-1">
 
-                    <label for="name" class="form-label paragraph">Nombre</label>
+                    <label for="name" class="form-label paragraph formulario">Nombre</label>
                     <input type="text" name="name" class="text-element form-control" id="name"
                         aria-describedby="emailHelp">
 
-                    <label for="exampleInputEmail1" class="form-label paragraph">Correo</label>
+                    <label for="exampleInputEmail1" class="form-label paragraph formulario">Correo</label>
                     <input type="email" name="email" class="text-element form-control" id="email"
                         aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
-                    <label for="message" class="form-label paragraph">Mensaje</label>
+                    <label for="message" class="form-label paragraph formulario mssg">Mensaje</label>
                     <textarea rows="3" name="message" type="textarea" class="form-control text-element"
                         id="message"></textarea>
                 </div>
-                <button id="enviar" type="submit" class="btn btn-primary mb-3 button">Enviar</button>
+                <button id="enviar" type="submit" class="btn btn-primary mb-3 button enviar">Enviar</button>
             </form>
             <div class="separador col-1"></div>
 
             <!-- Redes sociales y horario de atención -->
-            <section class="col-xs-2 col-sm-3 col-md-4 text-element text-center">
-                <h2 class="text-center subtitle">Redes Sociales</h2>
-                <h3 class="paragraph"><a href="https://www.facebook.com/teresitakawai">Facebook <img src="../img/facebook.png"
-                            width="40px" height="40px" alt="facebook"></a></h3>
-                <h3 class="paragraph"><a href="#">Whatsapp <img src="../img/whatsapp.png" width="40px" height="40px" alt="whatsapp"></a>
-                </h3>
-
-                <h2 class="subtitle">Horario de atención</h2>
-                <p class="paragraph">Lunes a sábado</p>
-                <p class="paragraph">11:00  a 15:30 hrs </p>
-                <p class="paragraph">18:00  a 22:00 hrs </p>
+            <section class="col-xs-2 col-sm-3 col-md-4 text-element text-center section-container">
+                <div class="redes-sociales">
+                    <h2 class="text-center subtitle rs">Redes Sociales</h2>
+                    <h3 class="paragraph"><a href="https://www.facebook.com/teresitakawai" class="link-icon"><span
+                                class="words">Facebook</span> <img class="contact-icon" src="../img/facebook.png"
+                                width="40px" height="40px" alt="facebook"></a></h3>
+                    <h3 class="paragraph"><a href="#" class="link-icon"><span class="words">Whatsapp</span> <img
+                                class="contact-icon" src="../img/whatsapp.png" width="40px" height="40px"
+                                alt="whatsapp"></a>
+                    </h3>
+                </div>
+                <div class="horario-atencion">
+                    <h2 class="subtitle">Horario de atención</h2>
+                    <p class="paragraph horario-content">Lunes a sábado</p>
+                    <p class="paragraph horario-content">11:00 a 15:30</p>
+                    <p class="paragraph horario content">18:00 a 22:00</p>
+                </div>
             </section>
 
             <ul class="text-bg-warning rounded-1" id="error-message">
@@ -144,7 +152,8 @@
                     <h5 class="text-uppercase mb-4 font-weinght-bold text-primary"> Sobre Nosotros</h5>
                     <hr class="mb-4">
                     <p>
-                        ¡Bienvenido a Teresita! Nos enorgullece ofrecer un destino único para los amantes del ánime y la cultura japonesa.
+                        ¡Bienvenido a Teresita! Nos enorgullece ofrecer un destino único para los amantes del ánime y la
+                        cultura japonesa.
                     </p>
 
 
@@ -153,7 +162,7 @@
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
                     <h5 class="text-uppercase mb-4 font-weinght-bold text-primary">¡Dejanos Ayudarte!</h5>
                     <hr class="mb-4">
-                    <p> 
+                    <p>
                         <a href="#" class="tex-dark">Crear Cuenta</a>
                     </p>
                     <p>
@@ -171,7 +180,7 @@
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
                     <h5 class="text-uppercase mb-4 font-weinght-bold text-primary">Términos legales</h5>
                     <hr class="mb-4">
-                    <p> 
+                    <p>
                         <a href="#" class="tex-dark"> Términos y Condiciones </a>
                     </p>
                     <p>
@@ -188,14 +197,14 @@
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
                     <h5 class="text-uppercase mb-4 font-weinght-bold text-primary">¡Contacto!</h5>
                     <hr class="mb-4">
-                    <p> 
+                    <p>
                         <li class="fas fa-home me-3"></li>Felipe Carrillo Puerto, Quintana Roo, México
                     </p>
 
                     <p>
                         <li class="fas fa-envelope me-3"></li>teresitashop@gmail.com
                     </p>
-                    
+
                     <p>
                         <li class="fas fa-phone me-3"></li>9831381485
                     </p>
@@ -217,7 +226,7 @@
                                 <a href="#" class="tex-dark"> <i class="fab fa-youtube"></i></a>
                             </li>
                         </ul>
-    
+
                     </div>
                 </div>
                 <div class="mb-4 text-center">

@@ -1,26 +1,118 @@
-h2{
+h2 {
     font-weight: bold;
     font-optical-sizing: auto;
 
 }
-h3{
+
+h3 {
     font-optical-sizing: auto;
 }
 
-a{
-color: black;
+a {
+    color: black;
 }
 
-p{
+p {
     font-optical-sizing: auto;
 }
 
-.btn-primary{
+.btn-primary {
     color: #A66CFF;
     background-color: #B3E0FF;
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
     color: #B3E0FF;
     background-color: #A66CFF;
+}
+
+/* Cambiar el orden de las secciones en dispositivos pequeños */
+@media screen and (max-width: 768px) {
+    .redes-sociales {
+        display: flex;
+        flex-direction: row;
+        order: 2;
+        font-size: 20px;
+        
+        /* Cambiar el orden de las redes sociales */
+    }
+    .rs{
+        margin-left: 20%;
+        
+    }
+
+    .horario-atencion {
+        display: flex;
+        flex-direction: column;
+        order: 1;
+      
+        /* Cambiar el orden del horario de atención */
+    }
+    .title {
+        font-size: 25px;
+        /*era un h1*/
+    }
+    .subtitle {
+        font-size: 15px;
+    }
+    .formulario{
+        margin-left: 13%;
+        font-size: 15px;
+    }
+    #name, #email {
+        margin-left: 13%;
+        width: 255px;
+        height: 30px;
+        margin-top: -10px;
+      
+    }
+    #message {
+        margin-left: 13%;
+        width: 255px;
+        height: 80px;
+        
+    }
+    .mssg{
+        margin-top: -100px; 
+    }
+
+    .enviar{
+        margin-left: 13%;
+        width: 255px;
+        height: 10;
+    }
+    .contact-icon{
+        height: 20px;
+        width: 20px;
+        margin-left: 60%;
+       
+    }
+
+    
+     .words{
+        display: none; /* Oculta los elementos Facebook y Whatsapp en dispositivos pequeños */
+      }
+
+      .horario-content{
+        margin-bottom: 1px; 
+        font-size: 15px;
+      }
+
+      .link-icon{ /*que los iconos de wa y fb sean clickables*/
+        z-index: 1;
+      }
+
+      .section-container{ 
+        max-width: 250px;
+        margin-left: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Espacio entre los elementos */
+      }
+
+     
+    
+  
+    
+     
 }

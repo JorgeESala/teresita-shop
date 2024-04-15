@@ -1,5 +1,4 @@
 
-
 body {
   background: linear-gradient(to bottom, #ffe3f9, #ffff);
   margin: 0;
@@ -46,4 +45,57 @@ nav li a:hover {
 #imgcarro2 {
   width: 40px;
   height: 40px;
+}
+
+
+@media (max-width: 768px) {
+  .logo {
+    width: 58px;
+    height: 80px;
+    margin-left: -10px;
+    margin-top: -10px;
+  }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  #imgUsuario2 {
+    /* Nuevos estilos para dispositivos móviles */
+    position: relative;
+    bottom: 47px; /* Cambia esta propiedad según la posición deseada */
+    right: 30px; /* Cambia esta propiedad según la posición deseada */
+  }
+}
+
+@media (max-width: 768px) {
+  #imgcarro {
+    /* Nuevos estilos para dispositivos móviles */
+    position: relative;
+    bottom: 43px; /* Cambia esta propiedad según la posición deseada */
+    right: 30px; /* Cambia esta propiedad según la posición deseada */
+    height: 33px;
+  }
+}
+
+@media (max-width: 768px) {
+  #navButton {
+    /* Nuevos estilos para dispositivos móviles */
+    position: relative;
+    top: 50px; /* Cambia esta propiedad según la posición deseada */
+    right: 288px; /* Cambia esta propiedad según la posición deseada */
+    width: 58px;
+    height: 35px;
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .form-control {
+    width: 293px; /* Ancho más largo para dispositivos móviles */
+    height: 35px; /* Altura más delgada para dispositivos móviles */
+    margin-left: 20%;
+    margin-top: -1%;
+ 
+  }
 }
