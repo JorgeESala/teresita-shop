@@ -24,29 +24,3 @@ p{
     color: #B3E0FF;
     background-color: #A66CFF;
 }
-<<<<<<< HEAD
-
-.link-color:hover{
-    color:#ff0597;
-}
-
-
-
-    /* Estilos adicionales */
-    @media (max-width: 991px) {
-        /* Estilos para dispositivos móviles */
-        .navbar-toggler {
-            order: -1; /* Cambiar el orden para que aparezca primero */
-        }
-
-        .logo,
-        .d-flex.justify-content-between.flex-wrap-reverse {
-            order: -2; /* Cambiar el orden para que aparezcan después */
-        }
-
-        .navbar-collapse {
-            order: -3; /* Cambiar el orden para que aparezca después */
-        }
-    }
-=======
->>>>>>> 5bcb019244e0fc6fe4f9241979df2b4cac8c0707

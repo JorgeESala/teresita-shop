@@ -34,16 +34,7 @@ a:hover{
 textarea {
   resize: none;
 }
-<<<<<<< HEAD
-.redes-sociales {
-  margin-top: 20px; /* Agrega margen superior en todos los tamaños de pantalla */
-}
 
-@media (min-width: 992px) {
-  .redes-sociales {
-      margin-left: 80px; /* Mantiene el margen izquierdo solo en dispositivos grandes */
-  }
-=======
 .button{
   background-color: #B3E0FF;
   color: #A66CFF;
@@ -57,7 +48,6 @@ textarea {
 
 /* breakpoint medium */
 @media (min-width: 768px){
- 
   .product-form{
     max-width:60%;
   } 
@@ -78,9 +68,7 @@ textarea {
     max-width:35%;
   } 
 
-<<<<<<< HEAD
->>>>>>> 382db2c20fae980301c19ea96a77244614086423
-=======
+
 }
 
 #category-list{
@@ -126,5 +114,5 @@ textarea {
 }
 footer{
   background-color: var(--color-morado-bajo);
->>>>>>> 5bcb019244e0fc6fe4f9241979df2b4cac8c0707
+
 }
