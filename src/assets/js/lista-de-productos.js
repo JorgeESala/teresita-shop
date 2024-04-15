@@ -27,13 +27,14 @@ function actualizarListado() {
             const itemHTML = `
                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-3">
         <div class="card text-center mx-auto h-100" >
-          <img src="${item.img}" class="mx-auto card-img-top text-center" alt="${item.description}" />
+          <a style="cursor: pointer;" 
+          onclick='cargarProducto(${JSON.stringify(item)})'> 
+          <img src="${item.img}" class="mx-auto card-img-top text-center" alt="${item.description}" /> </a>
           <div class="card-body">
             <h5 class="card-title subtitle">${item.name}</h5>
             <p class="card-text paragraph">${item.description}</p>
             <p class="card-text paragraph">$${item.price}</p>
             <div class="quantity-control container-fluid">
-              
             </div>
           </div>
         </div>
@@ -219,4 +220,20 @@ function handleFileUpload() {
         // Leer el contenido del archivo como una URL de datos
         reader.readAsDataURL(fileInput.files[0]);
     }
+}
+function cargarProducto(item){
+    const img = document.getElementById("product-img");
+    const name = document.getElementById("product-name");
+    const description = document.getElementById("product-description");
+    const quantity = document.getElementById("product-quantity");
+    const category = document.getElementById("product-category");
+    const input = document.getElementById("product-input");
+
+    img.src = item.img;
+    name.innerHTML = item.name;
+    description.innerHTML = item.description;
+    quantity.innerHTML = `<b>Disponibles: </b> ${item.quantity}`;
+    category.innerHTML =`<b> Categorias: </b> ${item.category}`;
+    input.setAttribute('max', item.quantity);
+    input.value = 1;
 }
