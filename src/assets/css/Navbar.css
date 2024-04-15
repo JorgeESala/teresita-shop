@@ -48,37 +48,51 @@ nav li a:hover {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .logo {
     width: 58px;
     height: 80px;
     margin-left: -10px;
     margin-top: -10px;
   }
+  #navbar-icons {
+    width:calc(100% - 60px);
+    
+  }
 }
 
 /* Estilos para dispositivos móviles */
 
-@media (max-width: 900px) {
-  
-  
-}
-
-
-@media screen and (max-width: 768px) {
-  
-  #searchForm {
-    flex-grow: 1;
-  }
+@media (max-width: 1199px) {
   #navbar-icons {
     display: flex;
     justify-content: end;
-    width: 90%;
+    
   }
+  #searchForm {
+    flex-grow: 1;
+  }
+  
 }
-#navbar-icons {
+
+@media (max-width: 991px) {
+  #navbar-icons {
+    width:calc(100% - 80px);
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
+  
+ 
+  
+}
+/* #navbar-icons {
   min-width: 85px;
 }
 #searchForm {
   min-width: 90px;
+} */
+.navbar-toggler:focus {
+  box-shadow: none;
 }
