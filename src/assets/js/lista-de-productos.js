@@ -227,7 +227,7 @@ function cargarProducto(item){
     const description = document.getElementById("product-description");
     const quantity = document.getElementById("product-quantity");
     const category = document.getElementById("product-category");
-    const input = document.getElementById("product-input");
+    const input = document.getElementById("productInput");
 
     img.src = item.img;
     name.innerHTML = item.name;
