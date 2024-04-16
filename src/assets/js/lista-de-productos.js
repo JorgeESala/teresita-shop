@@ -225,6 +225,7 @@ function cargarProducto(item){
     const img = document.getElementById("product-img");
     const name = document.getElementById("product-name");
     const description = document.getElementById("product-description");
+    const price = document.getElementById("product-price");
     const quantity = document.getElementById("product-quantity");
     const category = document.getElementById("product-category");
     const input = document.getElementById("productInput");
@@ -232,6 +233,7 @@ function cargarProducto(item){
     img.src = item.img;
     name.innerHTML = item.name;
     description.innerHTML = item.description;
+    price.innerHTML = `<b>Precio: </b> $${item.price}`;
     quantity.innerHTML = `<b>Disponibles: </b> ${item.quantity}`;
     category.innerHTML =`<b> Categorias: </b> ${item.category}`;
     input.setAttribute('max', item.quantity);
