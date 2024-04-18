@@ -6,36 +6,7 @@ if(!localStorage.getItem("publicaciones")){
     crearDatos();
 }
 
-document.getElementById("newItemForm").addEventListener('submit', (event) => {
-    event.preventDefault();
-    // Obtener los valores del formulario
-    const newItemName = document.getElementById("newItemName").value;
-    const newItemDescription = document.getElementById("newItemDescription").value;
-    const newItemImage = document.getElementById("newItemImage").value;
-    const newItemPrice = document.getElementById("newItemPrice").value;
-    const newItemQuantity = document.getElementById("newItemQuantity").value;
-    const newItemCategory = document.getElementById("newItemCategory").value;
 
-    // Crear un objeto de publicación y agregarlo al array
-    const newItem = {
-        name: newItemName,
-        description: newItemDescription,
-        img: newItemImage,
-        price: newItemPrice,
-        quantity: newItemQuantity,
-        category: newItemCategory
-    };
-    listadoPublicaciones.push(newItem);
-
-    // Limpiar formulario
-    document.getElementById("newItemForm").reset();
-
-    // Almacenar en el localstorage
-    localStorage.setItem("publicaciones", JSON.stringify(listadoPublicaciones));
-
-    // Actualizar el listado
-    actualizarListado();
-});
 
 
 // Actualizar el listado de publicaciones
@@ -54,29 +25,17 @@ function actualizarListado() {
 
         listadoPublicaciones.forEach((item, index) => {//Mostrar tarjeta del objeto
             const itemHTML = `
-                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 justify-content-center">
-        <div class="card text-center mx-auto" >
-          <img src="${item.img}" class="mx-auto card-img-top text-center" alt="${item.description}" />
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-3">
+        <div class="card text-center mx-auto h-100" >
+          <a style="cursor: pointer;" 
+          onclick='cargarProducto(${JSON.stringify(item)})'> 
+          <img src="${item.img}" class="mx-auto card-img-top text-center" alt="${item.description}" /> </a>
           <div class="card-body">
             <h5 class="card-title subtitle">${item.name}</h5>
             <p class="card-text paragraph">${item.description}</p>
-            <p class="card-text paragraph">${item.price}</p>
-            <p class="card-text paragraph">Disponibles: ${item.quantity}</p>
-            <p class="card-text paragraph">${item.category}</p>
+            <p class="card-text paragraph">$${item.price}</p>
             <div class="quantity-control container-fluid">
-              <div class="row justify-content-center mb-3">
-                <input id="1" value="0" class="col-3 paragraph" type="number" min="0" max="${item.quantity}" />
-              </div>
             </div>
-            <button href="#" class="button">
-              Agregar al carrito
-            </button>
-            <button href="#" onclick="eliminarPublicacion(${index})" class="button">
-            Eliminar
-            </button>
-            <button href="#" onclick="modificarPublicacion(${index})" class="button mt-1">
-            Modificar
-            </button>
           </div>
         </div>
       </div>
@@ -261,4 +220,22 @@ function handleFileUpload() {
         // Leer el contenido del archivo como una URL de datos
         reader.readAsDataURL(fileInput.files[0]);
     }
+}
+function cargarProducto(item){
+    const img = document.getElementById("product-img");
+    const name = document.getElementById("product-name");
+    const description = document.getElementById("product-description");
+    const price = document.getElementById("product-price");
+    const quantity = document.getElementById("product-quantity");
+    const category = document.getElementById("product-category");
+    const input = document.getElementById("productInput");
+
+    img.src = item.img;
+    name.innerHTML = item.name;
+    description.innerHTML = item.description;
+    price.innerHTML = `<b>Precio: </b> $${item.price}`;
+    quantity.innerHTML = `<b>Disponibles: </b> ${item.quantity}`;
+    category.innerHTML =`<b> Categorias: </b> ${item.category}`;
+    input.setAttribute('max', item.quantity);
+    input.value = 1;
 }

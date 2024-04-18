@@ -18,19 +18,32 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
-
 <body>
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
+            <!-- Contenedor del logo -->
             <img src="../img/LogoConTitulo.png" alt="" class="logo">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+
+            <div id="navbar-icons" class="order-lg-5 "> <!-- Agregamos una clase para flexbox -->
+                
+                <!-- <a href="#"><img id='lupabuscar' src="./img/lupa.png" alt="buscar"></a> -->
+                <a href="./SignUp.html"><img id='imgUsuario2' class="" src="../img/ninja-unscreen.gif"
+                        alt="Usuario"></a>
+                <a id="linkCarro" class="linkcarro position-relative" href="./Carrito.html" ><img id="imgcarro" src="../img/carro.png"
+                    alt="Usuario"></a>
+            </div>
+
+            <!-- Contenedor del menú de hamburguesa -->
+            <button id="navButton" class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Contenido del menú de navegación -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav justify-content-between w-75 m-2 m-auto">
+                <ul class="navbar-nav w-100 mx-auto justify-content-around order-0">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="/index.html">Inicio</a>
                     </li>
@@ -50,46 +63,59 @@
                             Publicaciones
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#">Lista de publicaciones </a></li>
+                            <li><a class="dropdown-item" href="#">Agregar publicación</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-disabled="true" href="./Nosotros.html">Sobre
-                            nosotros</a>
+                        <a class="nav-link" aria-disabled="true" href="./Nosotros.html">
+                            Nosotros</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-disabled="true" href="./Contacto.html">Contacto</a>
                     </li>
-                    <li class="nav-item">
-                        <div class="d-flex"> <!-- Agregamos una clase para flexbox -->
-                            <form role="search">
-                                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                            </form>
-                            <!-- <a href="#"><img id='lupabuscar' src="./img/lupa.png" alt="buscar"></a> -->
-                            <a href="./SignUp.html"><img id='imgUsuario2' class="" src="../img/ninja-unscreen.gif"
-                                    alt="Usuario"></a>
-                            <a href="./Carrito.html" class="linkcarro"><img id='imgcarro' src="../img/carro.png"
-                                    alt="Usuario"></a>
-                        </div>
-                    </li>
                 </ul>
             </div>
+            <form id="searchForm" class="d-inline-block" role="search">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            </form>
+
         </div>
     </nav>
+    <h1 class="title text-center">Productos</h1>
 </header>
-  <main>
-    <section class="container text-center mb-3">
-      <h1 class="title">Productos</h1>
-      <div class="justify-content-center">
+<main class="d-flex">
+    <section id="show-product" class="w-25 bg-white align-self-lg-start container pt-3 position-sticky">
+        <img id="product-img" src="../img/Gorro Ace.jpg" class="img-fluid" alt="" srcset="">
+        <h4 id="product-name" class="text-center">Gorro de Ace</h4>
+        <p id="product-description"> Gorro para adulto del personaje Ace</p>
+        <p id="product-price"><b>Precio:</b> $140</p>
+        <p id="product-quantity"><b>Disponibles: </b> 3</p>
+        <p id="product-category"> <b>Categorias:</b> One piece, Cosplay, Sombrero</p>
+        <hr>
+        <p class="text-center"><b>Cantidad</b></p>
+        <div class="quantity-selector">
+
+            <input id="productInput" value="1" class="form-control text-center mb-3" type="number" min="0" />
+        </div>
+
+        <button onclick="agregarAlCarrito(productInput.value)" class="button w-100 mb-3">
+            Agregar al carrito
+          </button>
+          <!-- <button href="#" class="button w-100 mb-3">
+            Comprar ahora
+          </button> -->
+    </section>
+
+    <section class="mb-3 text-center" id="product-container">
+      <div class="justify-content-center container-fluid">
         <div class="row" id="list-items">
         </div>
     </section>
-  </main>
+</main>
+    
+  
+
   <footer class="bg-ligh tex-dark pt-5 pb-4 mt-4">
     <div class="container tex-center text-md-start">
         <div class="row text-center text-md-start">
@@ -186,8 +212,8 @@
         </div>
     </div>
 </footer>
-  <script src="../js/agregar-productos.js"></script>
-  <script src="../js/vaildar-contacto.js"></script>
+  <script src="../js/lista-de-productos.js"></script>
+  <script src="../js/agregar-al-carrito.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>

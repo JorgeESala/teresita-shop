@@ -24,15 +24,17 @@ function actualizarListado() {
 
         listadoPublicaciones.forEach((item, index) => {//Mostrar tarjeta del objeto
             const itemHTML = `
-                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 justify-content-center">
-        <div class="card text-center mx-auto" style="width: 18rem">
-          <img src="${item.img}" class="mx-auto card-img-top text-center" alt="${item.description}" />
+                   
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-3">
+            <div class="card text-center h-100">
+            <img src="${item.img}" class=" card-img-top" alt="${item.description}" /> 
           <div class="card-body">
-            <h5 class="card-title">${item.name}</h5>
-            <p class="card-text">${item.description}</p>
+            <a href= "#"> <h4 class="card-title">${item.name}</h5></a>
+            <h5 class="card-text">$${item.price}</h4>
           </div>
+            </div>
+
         </div>
-      </div>
                 `;
             itemsContainer.innerHTML += itemHTML;
         
@@ -105,7 +107,7 @@ function limpiarListado() {
 function crearDatos(){
     const itemList = [];
     itemList.push( {
-        name: "Gorry Luffy",
+        name: "Gorra Luffy",
         description: "Gorro para adulto",
         img: "./src/assets/img/Gorro Luffy.jpg",
         price: "100",
@@ -114,7 +116,7 @@ function crearDatos(){
     });
 
     itemList.push( {
-        name: "Gorry Chopper",
+        name: "Gorra Chopper",
         description: "Gorro infantil del personaje Chopper",
         img: "./src/assets/img/Gorro Chopper.jpg",
         price: "140",
@@ -123,7 +125,7 @@ function crearDatos(){
     });
 
     itemList.push( {
-        name: "Gorry Ace",
+        name: "Gorra Ace",
         description: "Gorro para adulto del personaje Ace",
         img: "./src/assets/img/Gorro Ace.jpg",
         price: "140",
@@ -217,3 +219,5 @@ function handleFileUpload() {
         reader.readAsDataURL(fileInput.files[0]);
     }
 }
+
+
