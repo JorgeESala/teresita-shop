@@ -154,15 +154,11 @@ footer {
   }
 }
 @media (max-width: 991px) {
+  .right-section {
+    margin: 0 10px;
+  }
   #side-bar {
     display: none;
-  }
-  .right-section{
-    margin-left: 5vh;
-    margin-right: 5vh;
-  }
-  #carouselExample.right-section{
-    margin: 0 10px;
   }
   #index-section {
     width: 100% !important;
