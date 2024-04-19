@@ -2,7 +2,7 @@
   --color-rosa-fondo: #ffcbc6;
   --color-morado-bajo: #b6affc;
   --color-enlaces: #65f1ff;
-  --color-rosa-fuerte: #ff7abc;
+  --color-rosa-fuerte: #fd2f8f;
   --main-text-font: "Fredoka", sans-serif;
   --secondary-text-font: "Jost", sans-serif;
   --title-size: 45px;
@@ -73,17 +73,19 @@ textarea {
 #category-list {
   background-color: var(--color-rosa-fondo);
   color: black;
-  width: 250px;
+  width: 65%;
   font-size: 20px;
 }
-
+#category-list h2{
+  font-size: 2vw;
+}
 .round-border {
   border: solid 1px black;
   border-radius: 30px;
 }
-.carousel {
+/* .carousel {
   width: 80%;
-}
+} */
 .separador-inicio {
   background-color: var(--color-rosa-fondo);
 }
@@ -135,4 +137,30 @@ footer {
 
 #show-product {
   top: 0;
+}
+
+@media (max-width: 1200px) {
+  #side-bar{
+    width: 40vw !important;
+  }
+  #category-list h2{
+    font-size: 3vw;
+  }
+  /* .carousel{
+    width: 90%;
+  } */
+  .right-section{
+    margin-right: 10%;
+  }
+}
+@media (max-width: 991px) {
+  .right-section {
+    margin: 0 10px;
+  }
+  #side-bar {
+    display: none;
+  }
+  #index-section {
+    width: 100% !important;
+  }
 }
