@@ -153,7 +153,7 @@ footer {
     margin-right: 10%;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   #side-bar {
     display: none;
   }
@@ -163,5 +163,8 @@ footer {
   }
   #carouselExample.right-section{
     margin: 0 10px;
+  }
+  #index-section {
+    width: 100% !important;
   }
 }
