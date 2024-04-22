@@ -9,6 +9,7 @@
   --subtitle-size: 30px;
   --paragraph-size: 17px;
   --button-size: 18px;
+  --footer-size: 14px;
 }
 * {
   padding: 0;
@@ -105,6 +106,11 @@ textarea {
 }
 .paragraph {
   font-size: var(--paragraph-size);
+  font-family: var(--secondary-text-font);
+  font-optical-sizing: auto;
+}
+.footer-size{
+  font-size: var(--footer-size);
   font-family: var(--secondary-text-font);
   font-optical-sizing: auto;
 }

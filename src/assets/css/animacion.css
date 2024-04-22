@@ -34,10 +34,10 @@
     color: #fff;
     text-align: center;
     position: relative;
-    font-size: 15px;
+    font-size: 13px;
     padding: 10px 10px;
     background: rgba(0, 0, 0, 0.8);
-    margin: 20px 0 0 0
+    margin: 10px 0 0 0
 }
 
 .view p {
@@ -58,6 +58,7 @@
     color: #fff;
     text-transform: uppercase;
     box-shadow: 0 0 1px #000;
+    font-size: 13px;
 }
 
 .view a.info:hover {
@@ -94,16 +95,17 @@
 
 .view-on:hover h2 {
     transform: translateY(0px);
+    transform: translateX(-10px);
     transition-delay: 0.5s;
 }
 
 .view-on:hover p {
-    transform: translateX(0px) rotate(0deg);
+    transform: translateX(-10px) rotate(0deg);
     transition-delay: 0.4s;
 }
 
 .view-on:hover a.info {
-    transform: translateY(0px);
+    transform: translateY(-25px);
     transition-delay: 0.3s;
 }
 
@@ -113,7 +115,7 @@
     --title-size: 45px;
     --subtitle-size: 30px;
     --paragraph-size: 17px;
-    --button-size: 14px
+    --button-size: 14px;
 }
 
 .title {
@@ -139,3 +141,7 @@
     font-family: var(--secondary-text-font);
     font-optical-sizing: auto;
 }
+
+.imagen-gris {
+    filter: grayscale(100%);
+  }
