@@ -27,9 +27,9 @@ function actualizarListado() {
                    
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-3">
             <div class="card text-center h-100">
-            <img src="${item.img}" class=" card-img-top" alt="${item.description}" /> 
+            <a href= "./src/assets/pages/productos.html"><img src="${item.img}" class=" card-img-top" alt="${item.description}" /> </a>
           <div class="card-body">
-            <a href= "#"> <h4 class="card-title">${item.name}</h5></a>
+            <a href= "./src/assets/pages/productos.html"> <h4 class="card-title">${item.name}</h5></a>
             <h5 class="card-text">$${item.price}</h4>
           </div>
             </div>
