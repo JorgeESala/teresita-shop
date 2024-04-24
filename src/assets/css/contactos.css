@@ -27,7 +27,7 @@ p {
 }
 
 /* Cambiar el orden de las secciones en dispositivos pequeños */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .redes-sociales {
         display: flex;
         flex-direction: row;
@@ -37,7 +37,7 @@ p {
         /* Cambiar el orden de las redes sociales */
     }
     .rs{
-        margin-left: 20%;
+        margin-left: 33%;
         
     }
 
@@ -61,14 +61,14 @@ p {
     }
     #name, #email {
         margin-left: 13%;
-        width: 255px;
+        max-width: 75%;
         height: 30px;
         margin-top: -10px;
       
     }
     #message {
         margin-left: 13%;
-        width: 255px;
+        max-width: 75%;
         height: 80px;
         
     }
@@ -76,9 +76,9 @@ p {
         margin-top: -100px; 
     }
 
-    .enviar{
+    #enviar{
         margin-left: 13%;
-        width: 255px;
+        max-width: 75%;
         height: 10;
     }
     .contact-icon{
@@ -103,12 +103,91 @@ p {
       }
 
       .section-container{ 
-        max-width: 250px;
-        margin-left: 25px;
+        max-width: 73%;
+        margin-left: 6%;
         display: flex;
         flex-direction: column;
         justify-content: space-between; /* Espacio entre los elementos */
       }
      
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .redes-sociales {
+        display: flex;
+        flex-direction: row;
+        order: 2;
+        font-size: 20px;
+        
+        /* Cambiar el orden de las redes sociales */
+    }
+    .rs{
+        margin-left: 4%;
+        margin-bottom: 20%;
+        
+    }
+
+   .formbox{
+    margin-left: -7%;
+   }
+
+    .formulario{
+        margin-left: 5%;
+        font-size: 15px;
+    }
+    #name, #email {
+        margin-left: 5%;
+        max-width: 100%;
+        height: 30px;
+        margin-top: -10px;
+      
+    }
+    #message {
+        margin-left: 5%;
+        max-width: 100%;
+        height: 80px;
+        
+    }
+    .mssg{
+        margin-top: -100px; 
+    }
+
+    #enviar{
+        margin-left: 5%; /*no funciona nada de aqui*/
+        max-width: 100%;
+        height: 10;
+    }
+    .contact-icon{
+        height: 20px;
+        width: 20px;
+        margin-left: 60%;
+       
+    }
+
+    
+     .words{
+        display: none; /* Oculta los elementos Facebook y Whatsapp en dispositivos pequeños */
+      }
+
+      .horario-content{
+        margin-top: 5%;
+        margin-bottom: 1px; 
+        font-size: 15px;
+      }
+
+      .link-icon{ /*que los iconos de wa y fb sean clickables*/
+        z-index: 1;
+      }
+
+      .section-container{ 
+        max-width: 73%;
+        margin-left: 14%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Espacio entre los elementos */
+      }
+     .horario-atencion{
+        margin-top: 20%;
+     }
 }
 
