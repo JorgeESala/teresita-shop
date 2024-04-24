@@ -25,7 +25,7 @@ function actualizarListado() {
 
         listadoPublicaciones.forEach((item, index) => {//Mostrar tarjeta del objeto
             const itemHTML = `
-                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-3">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
         <div class="card text-center mx-auto h-100" >
           <a style="cursor: pointer;" 
           onclick='cargarProducto(${JSON.stringify(item)})'> 
@@ -238,4 +238,14 @@ function cargarProducto(item){
     category.innerHTML =`<b> Categorias: </b> ${item.category}`;
     input.setAttribute('max', item.quantity);
     input.value = 1;
+    openProductsMovil();
+}
+
+function closeProduct(){
+    document.getElementById("show-product").style.display = "none";
+}
+document.getElementById("close-img").addEventListener("click", closeProduct);
+
+function openProductsMovil(){
+    document.getElementById("show-product").style.display = "block";
 }
