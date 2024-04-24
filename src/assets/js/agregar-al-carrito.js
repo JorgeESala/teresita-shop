@@ -9,6 +9,7 @@ function agregarAlCarrito(quantity){
     }
     console.log(localStorage.getItem("carrito"));
     actualizarCarrito();
+    alert("Producto agregado");
 }
 
 

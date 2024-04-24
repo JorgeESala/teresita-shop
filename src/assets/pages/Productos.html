@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, target-densitydpi=device-dpi">
   <title>Productos</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="../css/Navbar.css" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <link rel="stylesheet" href="../css/productos.css">
 </head>
 <body>
   <header>
@@ -86,22 +86,30 @@
 </header>
 <main class="d-flex">
     <section id="show-product" class="w-25 bg-white align-self-lg-start container pt-3 position-sticky">
-        <img id="product-img" src="../img/Gorro Ace.jpg" class="img-fluid" alt="" srcset="">
-        <h4 id="product-name" class="text-center">Gorro de Ace</h4>
-        <p id="product-description"> Gorro para adulto del personaje Ace</p>
-        <p id="product-price"><b>Precio:</b> $140</p>
-        <p id="product-quantity"><b>Disponibles: </b> 3</p>
-        <p id="product-category"> <b>Categorias:</b> One piece, Cosplay, Sombrero</p>
-        <hr>
-        <p class="text-center"><b>Cantidad</b></p>
-        <div class="quantity-selector">
-
-            <input id="productInput" value="1" class="form-control text-center mb-3" type="number" min="0" />
+        <div class="position-relative">
+            
+            <a id="anchor-img"><img id="product-img" src="../img/Gorro Ace.jpg" class="img-fluid position-relative" alt="" srcset="">
+                <span id="close-img" class="button position-absolute top-0 end-0">X</span>
+            </a>
+            
+            
+            <h4 id="product-name" class="text-center">Gorro de Ace</h4>
+            <p id="product-description"> Gorro para adulto del personaje Ace</p>
+            <p id="product-price"><b>Precio:</b> $140</p>
+            <p id="product-quantity"><b>Disponibles: </b> 3</p>
+            <p id="product-category"> <b>Categorias:</b> One piece, Cosplay, Sombrero</p>
+            <hr>
+            <p class="text-center"><b>Cantidad</b></p>
+            <div class="quantity-selector">
+    
+                <input id="productInput" value="1" class="form-control text-center mb-3" type="number" min="0" />
+            </div>
+    
+            <button onclick="agregarAlCarrito(productInput.value)" class="button w-100 mb-3">
+                Agregar al carrito
+              </button>
         </div>
-
-        <button onclick="agregarAlCarrito(productInput.value)" class="button w-100 mb-3">
-            Agregar al carrito
-          </button>
+        
           <!-- <button href="#" class="button w-100 mb-3">
             Comprar ahora
           </button> -->

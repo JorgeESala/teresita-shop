@@ -1,0 +1,34 @@
+/*  Cuando la página sea mediana o más chica
+ se oculta la barra lateral de la página productos*/
+ @media (max-width: 991px) {
+    #show-product{
+        position: absolute !important;
+
+        z-index: 1;
+        width: 100% !important;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+    }
+    #product-container {
+        width: 100% !important;
+    }
+    #close-img {
+        display: block !important;
+      }
+  }
+
+  @media (min-width: 992px) {
+    #show-product{
+        display: block !important;
+    }
+  }
+
+  #anchor-img:hover {
+    cursor: pointer;
+  }
+
+  #close-img {
+    display: none;
+  }
