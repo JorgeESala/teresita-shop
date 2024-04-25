@@ -170,3 +170,7 @@ footer {
     width: 100% !important;
   }
 }
+
+.justificado {
+  text-align: justify;
+}
