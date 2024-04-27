@@ -1,6 +1,6 @@
 INSERT INTO `teresita`.`productos`
-(`nombreProduc`,
-`descripcionProduct`,
+(`nombre`,
+`descripcion`,
 `precio`,
 `imagen`,
 `stock`)
