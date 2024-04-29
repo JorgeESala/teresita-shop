@@ -6,23 +6,25 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.ToString;
 
 @Entity
 @Table(name = "productos")
+@ToString
 public class Product {
 
-	@Column(name = "id_productos")
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
-	@Column(name = "nombre")
+	@Column(name = "nombre", nullable = false)
 	private String name;
-	@Column(name = "descripcion")
+	@Column(name = "descripcion", nullable = false)
 	private String description;
-	@Column(name = "precio")
+	@Column(name = "precio", nullable = false)
 	private Double price;
-	@Column(name = "imagen")
+	@Column(name = "imagen", nullable = false)
 	private String image;
+	@Column(nullable = false)
 	private Integer stock;
 	
 	public String getName() {
@@ -56,24 +58,6 @@ public class Product {
 		this.stock = stock;
 	}
 	
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Product [id=");
-		builder.append(id);
-		builder.append(", name=");
-		builder.append(name);
-		builder.append(", description=");
-		builder.append(description);
-		builder.append(", price=");
-		builder.append(price);
-		builder.append(", image=");
-		builder.append(image);
-		builder.append(", stock=");
-		builder.append(stock);
-		builder.append("]");
-		return builder.toString();
-	}
 	
 	
 }

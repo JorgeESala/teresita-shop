@@ -7,18 +7,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.model.Product;
-import com.example.demo.service.ProductService;
+import com.example.demo.model.User;
+import com.example.demo.service.UserService;
 
 @RestController
-@RequestMapping("/api/products")
-public class ProductController {
+@RequestMapping("/api/users")
+public class UserController {
 
 	@Autowired
-	private ProductService productService;
+	UserService userService;
 	
 	@GetMapping
-	public List<Product> findAll(){
-		return productService.findAll();
+	public List<User> findAll(){
+		return userService.findAll();	
 	}
 }
