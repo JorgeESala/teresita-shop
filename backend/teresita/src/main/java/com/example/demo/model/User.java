@@ -9,7 +9,6 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-
 @Entity
 @Table(name = "usuarios")
 @NoArgsConstructor
@@ -30,6 +29,13 @@ public class User {
 	private String password;
 	@Column(name = "tipo_usuario", length = 1, nullable = false)
 	private String role;
+	@Column(nullable = true)
+	private Boolean active;
+	
+	
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}
@@ -62,6 +68,12 @@ public class User {
 	}
 	public Integer getId() {
 		return id;
+	}
+	public Boolean getActive() {
+		return active;
+	}
+	public void setActive(Boolean active) {
+		this.active = active;
 	}
 	
 	
