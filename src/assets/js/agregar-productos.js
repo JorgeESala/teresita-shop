@@ -1,10 +1,10 @@
 // Array publicaciones
 let listadoPublicaciones = [];
 
+
+// Cargar los datos almacenados en la API al cargar la página
 cargarDatos();
-if(!localStorage.getItem("publicaciones")){
-    crearDatos();
-}
+
 
 document.getElementById("newItemForm").addEventListener('submit', (event) => {
     event.preventDefault();
@@ -16,7 +16,7 @@ document.getElementById("newItemForm").addEventListener('submit', (event) => {
     const newItemQuantity = document.getElementById("newItemQuantity").value;
     const newItemCategory = document.getElementById("newItemCategory").value;
 
-    // Crear un objeto de publicación y agregarlo al array
+    // Crear un objeto de publicación y agregarlo a la API
     const newItem = {
         name: newItemName,
         description: newItemDescription,
@@ -25,23 +25,30 @@ document.getElementById("newItemForm").addEventListener('submit', (event) => {
         quantity: newItemQuantity,
         category: newItemCategory
     };
-    listadoPublicaciones.push(newItem);
+
+    // Enviar una solicitud POST a la API para agregar el elemento
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newItem)
+    })
+        .then(response => response.json())
+        .then(data => {
+            listadoPublicaciones.push(data);
+            actualizarListado();
+        })
+        .catch(error => console.error(error));
 
     // Limpiar formulario
     document.getElementById("newItemForm").reset();
-
-    // Almacenar en el localstorage
-    localStorage.setItem("publicaciones", JSON.stringify(listadoPublicaciones));
-
-    // Actualizar el listado
-    actualizarListado();
 });
 
 
 // Actualizar el listado de publicaciones
 function actualizarListado() {
     const itemsContainer = document.getElementById("list-items");
-    const image = "";
     itemsContainer.innerHTML = ""; // Limpiar el contenedor antes de agregar elementos
 
     if (listadoPublicaciones.length === 0) {
@@ -49,7 +56,7 @@ function actualizarListado() {
         itemsContainer.innerHTML = "<p>No hay publicaciones.</p>";
     } else {
 
-    // Verificar si se seleccionó un archivo
+        // Verificar si se seleccionó un archivo
 
 
         listadoPublicaciones.forEach((item, index) => {//Mostrar tarjeta del objeto
@@ -86,12 +93,25 @@ function actualizarListado() {
     }
 }
 
+
 // Eliminar una publicación del listado
 function eliminarPublicacion(index) {
-    listadoPublicaciones.splice(index, 1);
-    actualizarListado();
-    localStorage.setItem("publicaciones", JSON.stringify(listadoPublicaciones));
+    // Enviar una solicitud DELETE a la API para eliminar el elemento en el servidor
+    fetch(`https://jsonplaceholder.typicode.com/posts/${listadoPublicaciones[index].id}`, {
+        method: 'DELETE'
+    })
+        .then(response => {
+            if (response.ok) {
+                // Si la solicitud fue exitosa, eliminar el elemento de la lista
+                listadoPublicaciones.splice(index, 1);
+                actualizarListado();
+            } else {
+                console.error('Error al eliminar el elemento');
+            }
+        })
+        .catch(error => console.error(error));
 }
+
 
 // Modificar una publicación del listado
 function modificarPublicacion(index) {
@@ -105,12 +125,22 @@ function modificarPublicacion(index) {
     document.getElementById("newItemQuantity").value = item.quantity;
     document.getElementById("newItemCategory").value = item.category;
 
-    // Eliminar el elemento del listado
-    listadoPublicaciones.splice(index, 1);
-
-    // Actualizar el listado de publicaciones en la página
-    actualizarListado();
-    localStorage.setItem("publicaciones", JSON.stringify(listadoPublicaciones));
+    // Enviar la solicitud PUT a la API para actualizar el elemento
+    fetch(`https://jsonplaceholder.typicode.com/posts/${index}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(item)
+    })
+        .then(response => response.json())
+        .then(data => {
+            listadoPublicaciones[index] = data;
+            // Eliminar el elemento del listado
+            listadoPublicaciones.splice(index, 1);
+            actualizarListado();
+        })
+        .catch(error => console.error(error));
 }
 
 // Mostrar el listado de publicaciones en formato JSON
@@ -124,32 +154,36 @@ function mostrarJSON() {
     }
 }
 
-// Cargar los datos almacenados localmente al cargar la página
+// Cargar los datos almacenados en la API al cargar la página
 function cargarDatos() {
-    let publicacionesGuardadas = localStorage.getItem('publicaciones');
-    if (publicacionesGuardadas) {
-        listadoPublicaciones = JSON.parse(publicacionesGuardadas);
-        actualizarListado();
-    }
+    // Enviar una solicitud GET a la API para obtener el listado de publicaciones
+    fetch("https://jsonplaceholder.typicode.com/posts")
+        .then(response => response.json())
+        .then(data => {
+            listadoPublicaciones = data;
+            actualizarListado();
+        })
+        .catch(error => console.error(error));
 }
+
 
 // Función para eliminar todas las publicaciones
 function limpiarListado() {
-    // Limpiar el listado de publicaciones
-    listadoPublicaciones = [];
-
-    // Eliminar publicaciones del localstorage
-    localStorage.removeItem("publicaciones");
-
-    // Obtener el contenedor de las tarjetas
-    const itemsContainer = document.getElementById("list-items");
-
-    // Establecer su contenido en vacío
-    itemsContainer.innerHTML = "";
+    // Enviar una solicitud DELETE a la API para eliminar todas las publicaciones
+    fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: 'DELETE'
+    })
+        .then(() => {
+            listadoPublicaciones = [];
+            actualizarListado();
+        })
+        .catch(error => console.error(error));
 }
-function crearDatos(){
+
+
+/* function crearDatos() {
     const itemList = [];
-    itemList.push( {
+    itemList.push({
         name: "Gorry Luffy",
         description: "Gorro para adulto",
         img: "../img/Gorro Luffy.jpg",
@@ -158,7 +192,7 @@ function crearDatos(){
         category: "One piece"
     });
 
-    itemList.push( {
+    itemList.push({
         name: "Gorry Chopper",
         description: "Gorro infantil del personaje Chopper",
         img: "../img/Gorro Chopper.jpg",
@@ -167,7 +201,7 @@ function crearDatos(){
         category: "One piece"
     });
 
-    itemList.push( {
+    itemList.push({
         name: "Gorry Ace",
         description: "Gorro para adulto del personaje Ace",
         img: "../img/Gorro Ace.jpg",
@@ -176,7 +210,7 @@ function crearDatos(){
         category: "One piece"
     });
 
-    itemList.push( {
+    itemList.push({
         name: "Juguete Iron Man",
         description: "Juguete lanza discos de iron man",
         img: "../img/Juguete iron man.jpg",
@@ -185,7 +219,7 @@ function crearDatos(){
         category: "Marvel"
     });
 
-    itemList.push( {
+    itemList.push({
         name: "Monedero de naruto",
         description: "Monedero que usa naruto en el ánime",
         img: "../img/Monedero naruto.jpg",
@@ -194,7 +228,7 @@ function crearDatos(){
         category: "Naruto"
     });
 
-    itemList.push( {
+    itemList.push({
         name: "Figura pikachu gengar",
         description: "Figura de pikachu disfrazado de gengar con caja",
         img: "../img/Pikachu gengar.jpg",
@@ -203,7 +237,7 @@ function crearDatos(){
         category: "Pokemon"
     });
 
-    itemList.push( {
+    itemList.push({
         name: "Playera zoro",
         description: "Playera neón talla Grande",
         img: "../img/Playera zoro.jpg",
@@ -212,7 +246,7 @@ function crearDatos(){
         category: "One piece"
     });
 
-    itemList.push( {
+    itemList.push({
         name: "Playera pokemon",
         description: "Playera neón talla chica",
         img: "../img/Playera pokemon.jpg",
@@ -221,7 +255,7 @@ function crearDatos(){
         category: "Pokemon"
     });
 
-    itemList.push( {
+    itemList.push({
         name: "Rosa amarilla armable",
         description: "Rosa armable tipo lego",
         img: "../img/Rosa amarilla armable.jpg",
@@ -230,7 +264,7 @@ function crearDatos(){
         category: "Armable lego block"
     });
 
-    itemList.push( {
+    itemList.push({
         name: "Cartera kuromi",
         description: "Cartera de 30 x 15 cm",
         img: "../img/Cartera kuromi.jpg",
@@ -239,11 +273,11 @@ function crearDatos(){
         category: "Kuromi San Rio"
     });
 
-    for(const item of itemList){
+    for (const item of itemList) {
         listadoPublicaciones.push(item);
     }
     actualizarListado();
-}
+} */
 
 function handleFileUpload() {
     const fileInput = document.getElementById("newItemImage");
