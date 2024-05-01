@@ -94,14 +94,4 @@ function showAlert(message, element, type = "danger") {
   element.insertAdjacentHTML("beforebegin", alertTemplate);
   const alertElement = document.querySelector(".alert");
   alertElement.scrollIntoView({ behavior: "smooth" });
-
-  // Cambiar el color de los campos directamente con JavaScript
-  if (type === "danger") {
-    //element.style.borderColor = "red";
-  } else {
-    const formElements = signupForm.querySelectorAll("input");
-    formElements.forEach((el) => {
-      el.style.borderColor = "green";
-    });
-  }
 }
