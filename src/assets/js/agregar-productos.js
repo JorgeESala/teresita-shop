@@ -61,8 +61,8 @@ function actualizarListado() {
 
         listadoPublicaciones.forEach((item, index) => {//Mostrar tarjeta del objeto
             const itemHTML = `
-                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 justify-content-center">
-        <div class="card text-center mx-auto" >
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 justify-content-center mb-3">
+        <div class="card text-center h-100" >
           <img src="${item.img}" class="mx-auto card-img-top text-center" alt="${item.description}" />
           <div class="card-body">
             <h5 class="card-title subtitle">${item.name}</h5>

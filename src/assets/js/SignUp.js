@@ -24,28 +24,46 @@ signupForm.addEventListener("submit", (e) => {
     return showAlert("Las contraseñas no coinciden");
   }
 
-  const Users = JSON.parse(localStorage.getItem("users")) || [];
-  const isUserRegistered = Users.find((user) => user.email === email);
-  if (isUserRegistered) {
-    return showAlert("El usuario ya esta registrado");
-  }
-
-  Users.push({
+  // Crear objeto de usuario
+  const newUser = {
     name: name,
     number: number,
     email: email,
     password: password,
     password1: password1,
-  });
-  localStorage.setItem("users", JSON.stringify(Users));
-  showAlert("Registro exitoso!", "success");
-  window.location.href = "/index.html";
+  };
+
+  // Enviar solicitud POST a la API para registrar el usuario
+  fetch("/api/users/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(newUser),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Error al registrar el usuario");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      if (data.message === "El usuario ya está registrado") {
+        showAlert(data.message);
+      } else {
+        showAlert("Registro exitoso!", "success");
+        window.location.href = "/index.html";
+      }
+    })
+    .catch((error) => {
+      showAlert(error.message);
+    });
 });
 
 function showAlert(message, type = "danger") {
   const existingAlert = document.querySelector(".alert");
-    if (existingAlert) existingAlert.remove();
-    
+  if (existingAlert) existingAlert.remove();
+
   const alertTemplate = `
     <div class="alert alert-${type} alert-dismissible fade show" role="alert">
       ${message}

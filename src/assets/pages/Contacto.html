@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,23 +28,23 @@
             <div class="container-fluid">
                 <!-- Contenedor del logo -->
                 <img src="../img/LogoConTitulo.png" alt="" class="logo">
-    
+
                 <div id="navbar-icons" class="order-lg-5 "> <!-- Agregamos una clase para flexbox -->
-                    
+
                     <!-- <a href="#"><img id='lupabuscar' src="./img/lupa.png" alt="buscar"></a> -->
                     <a href="./SignUp.html"><img id='imgUsuario2' class="" src="../img/ninja-unscreen.gif"
                             alt="Usuario"></a>
-                    <a id="linkCarro" class="linkcarro position-relative" href="./Carrito.html" ><img id="imgcarro" src="../img/carro.png"
-                        alt="Usuario"></a>
+                    <a id="linkCarro" class="linkcarro position-relative" href="./Carrito.html"><img id="imgcarro"
+                            src="../img/carro.png" alt="Usuario"></a>
                 </div>
-    
+
                 <!-- Contenedor del menú de hamburguesa -->
                 <button id="navButton" class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-    
+
                 <!-- Contenido del menú de navegación -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav w-100 mx-auto justify-content-around order-0">
@@ -84,7 +83,7 @@
                 <form id="searchForm" class="d-inline-block" role="search">
                     <input class="form-control" type="search" placeholder="Search" aria-label="Search">
                 </form>
-    
+
             </div>
         </nav>
     </header>
@@ -97,18 +96,19 @@
             <form netlify class="col-xs-2 col-sm-6 col-md-6 formbox">
                 <div class="mb-1">
 
-                    <label for="name" class="form-label paragraph formulario">Nombre</label>
-                    <input type="text" name="name" class="text-element form-control" id="name"
-                        aria-describedby="emailHelp">
+                    <label for="name" class="form-label ps-0 paragraph formulario">Nombre</label>
+                    <input type="text" name="name" placeholder="Nombre Apellido"
+                        class="text-element form-control paragraph" id="name-registro" aria-describedby="emailHelp"
+                        style="width: 100%;" required autofocus>
 
-                    <label for="exampleInputEmail1" class="form-label paragraph formulario">Correo</label>
-                    <input type="email" name="email" class="text-element form-control" id="email"
-                        aria-describedby="emailHelp">
+                    <label for="exampleInputEmail1" class="form-label ps-0 paragraph formulario">Correo electrónico</label>
+                    <input type="email" name="email" placeholder="ejemplo@mail.com" class="text-element form-control paragraph"
+                        id="email-registro" aria-describedby="emailHelp" style="width: 100%;" required>
                 </div>
                 <div class="mb-3">
-                    <label for="message" class="form-label paragraph formulario mssg">Mensaje</label>
-                    <textarea rows="3" name="message" type="textarea" class="form-control text-element"
-                        id="message"></textarea>
+                    <label for="message" class="form-label ps-0 paragraph formulario mssg">Mensaje</label>
+                    <textarea rows="3" name="message" placeholder="Escribenos..." type="textarea" class="form-control text-element paragraph"
+                        id="name-registro" aria-describedby="emailHelp" style="width: 100%;" required></textarea>
                 </div>
                 <button id="enviar" type="submit" class="mb-3 button">Enviar</button>
             </form>
