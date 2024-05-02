@@ -16,6 +16,59 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `carritos`
+--
+
+DROP TABLE IF EXISTS `carritos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `carritos` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `usuario_id` int NOT NULL,
+  PRIMARY KEY (`id`,`usuario_id`),
+  KEY `usuario_id_idx` (`usuario_id`),
+  CONSTRAINT `usuario_id` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `carritos`
+--
+
+LOCK TABLES `carritos` WRITE;
+/*!40000 ALTER TABLE `carritos` DISABLE KEYS */;
+INSERT INTO `carritos` VALUES (1,9);
+/*!40000 ALTER TABLE `carritos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `carritos_has_productos`
+--
+
+DROP TABLE IF EXISTS `carritos_has_productos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `carritos_has_productos` (
+  `carrito_id` int NOT NULL,
+  `producto_id` int NOT NULL,
+  `cantidad` int NOT NULL,
+  PRIMARY KEY (`carrito_id`,`producto_id`),
+  KEY `producto_id_idx` (`producto_id`),
+  CONSTRAINT `carrito_id` FOREIGN KEY (`carrito_id`) REFERENCES `carritos` (`id`),
+  CONSTRAINT `producto_id` FOREIGN KEY (`producto_id`) REFERENCES `productos` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `carritos_has_productos`
+--
+
+LOCK TABLES `carritos_has_productos` WRITE;
+/*!40000 ALTER TABLE `carritos_has_productos` DISABLE KEYS */;
+/*!40000 ALTER TABLE `carritos_has_productos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `categorias`
 --
 
@@ -224,9 +277,10 @@ CREATE TABLE `usuarios` (
   `correo` varchar(45) NOT NULL,
   `contraseña` varchar(45) NOT NULL,
   `tipo_usuario` varchar(1) NOT NULL,
+  `active` tinyint(1) DEFAULT '1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `correoElect_UNIQUE` (`correo`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -235,7 +289,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Juan Perez','5487251022','example1@hotmail.com','1234','1'),(2,'Jorge Buen Rostro','5578120368','example2@hotmail.com','1234','1'),(3,'Serch de la Parra','5519874502','example3@hotmail.com','1234','1'),(4,'Pedro Mendoza','5423684702','exampleadmin1@hotmail.com','admin','2'),(5,'Panfilo Bonilla','5689874512','exampleadmin2@hotmail.com','admin','2');
+INSERT INTO `usuarios` VALUES (1,'Juan Perez','5487251022','example1@hotmail.com','1234','1',1),(2,'Jorge Buen Rostro','5578120368','example2@hotmail.com','1234','1',1),(3,'Serch de la Parra','5519874502','example3@hotmail.com','1234','1',1),(4,'Pedro Mendoza','5423684702','exampleadmin1@hotmail.com','admin','2',1),(5,'Panfilo Bonilla','5689874512','exampleadmin2@hotmail.com','admin','2',1),(6,'ejemplo_usuario','9991234567','ejemplo@dominio.org','password123','1',1),(8,'ejemplo_usuario','9991234567','ejemplo@dominio.mx','password','1',NULL),(9,'John Juan','9991234567','ejemplo@correochido.com','pass12345','1',1),(10,'Cristian Yañez','9991234567','ejemplo@probando.com','pass123','1',NULL);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -248,4 +302,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-27 12:51:00
+-- Dump completed on 2024-05-01 22:52:58

@@ -8,5 +8,6 @@ import com.example.demo.model.Product;
 public interface ProductRepository extends CrudRepository<Product, Long>{
 
 	List<Product> findAll();
+	Product findById(Integer id);
 	
 }
