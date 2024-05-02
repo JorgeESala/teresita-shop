@@ -10,6 +10,7 @@ import org.springframework.data.repository.CrudRepository;
 public interface UserRepository extends CrudRepository<User, Long>{
 	
 	List<User> findAll();
-	Optional<User> findUserById(Integer id);
+	Optional<User> findById(Integer id);
+	Optional<User> findByEmail(String email);
 	Boolean existsByEmail(String email);
 }
