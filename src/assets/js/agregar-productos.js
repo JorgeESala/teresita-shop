@@ -27,7 +27,7 @@ document.getElementById("newItemForm").addEventListener('submit', (event) => {
     };
 
     // Enviar una solicitud POST a la API para agregar el elemento
-    fetch('https://jsonplaceholder.typicode.com/posts', {
+    fetch('http://localhost:8080/api/products', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -97,7 +97,7 @@ function actualizarListado() {
 // Eliminar una publicación del listado
 function eliminarPublicacion(index) {
     // Enviar una solicitud DELETE a la API para eliminar el elemento en el servidor
-    fetch(`https://jsonplaceholder.typicode.com/posts/${listadoPublicaciones[index].id}`, {
+    fetch(`http://localhost:8080/api/products/${listadoPublicaciones[index].id}`, {
         method: 'DELETE'
     })
         .then(response => {
@@ -126,7 +126,7 @@ function modificarPublicacion(index) {
     document.getElementById("newItemCategory").value = item.category;
 
     // Enviar la solicitud PUT a la API para actualizar el elemento
-    fetch(`https://jsonplaceholder.typicode.com/posts/${index}`, {
+    fetch(`http://localhost:8080/api/products/${index}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -157,7 +157,7 @@ function mostrarJSON() {
 // Cargar los datos almacenados en la API al cargar la página
 function cargarDatos() {
     // Enviar una solicitud GET a la API para obtener el listado de publicaciones
-    fetch("https://jsonplaceholder.typicode.com/posts")
+    fetch("http://localhost:8080/api/products")
         .then(response => response.json())
         .then(data => {
             listadoPublicaciones = data;
@@ -170,7 +170,7 @@ function cargarDatos() {
 // Función para eliminar todas las publicaciones
 function limpiarListado() {
     // Enviar una solicitud DELETE a la API para eliminar todas las publicaciones
-    fetch("https://jsonplaceholder.typicode.com/posts", {
+    fetch("http://localhost:8080/api/products", {
         method: 'DELETE'
     })
         .then(() => {

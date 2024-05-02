@@ -1,6 +1,8 @@
 const signupForm = document.querySelector("#signupForm");
+
 signupForm.addEventListener("submit", (e) => {
   e.preventDefault();
+
   const name = document.querySelector("#name-registro").value;
   const number = document.querySelector("#tel-registro").value;
   const email = document.querySelector("#email-registro").value;
@@ -34,7 +36,7 @@ signupForm.addEventListener("submit", (e) => {
   };
 
   // Enviar solicitud POST a la API para registrar el usuario
-  fetch("/api/users/", {
+  fetch("http://localhost:8080/api/users", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

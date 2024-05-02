@@ -40,7 +40,7 @@ function actualizarListado() {
 // Cargar los datos desde la API al cargar la página
 function cargarDatos() {
     // Enviar una solicitud GET a la API para obtener el listado de publicaciones
-    fetch("/api/products")
+    fetch("http://localhost:8080/api/products")
         .then(response => {
             if (!response.ok) {
                 throw new Error('Error al cargar los datos');
