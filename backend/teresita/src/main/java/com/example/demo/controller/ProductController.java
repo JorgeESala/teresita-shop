@@ -8,17 +8,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.model.Product;
-import com.example.demo.repository.ProductRepository;
+import com.example.demo.service.ProductService;
 
 @RestController
 @RequestMapping("/api/products")
 public class ProductController {
 
 	@Autowired
-	private ProductRepository productRepository;
+	private ProductService productService;
 	
 	@GetMapping
 	public List<Product> findAll(){
-		return productRepository.findAll();
+		return productService.findAll();
 	}
 }
