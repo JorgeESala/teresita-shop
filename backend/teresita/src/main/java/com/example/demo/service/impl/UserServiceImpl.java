@@ -21,8 +21,8 @@ public class UserServiceImpl implements UserService{
 		return userRepository.findAll();
 	}
 	
-	public Optional<User> findUserById(Integer id) {
-		return userRepository.findUserById(id);
+	public Optional<User> findById(Integer id) {
+		return userRepository.findById(id);
 	}
 	
 	
@@ -56,10 +56,12 @@ public class UserServiceImpl implements UserService{
 	}
 	@Override
 	public User updateUser(User newUser, Integer id) {
-		Optional<User> user = findUserById(id);	
-		newUser.setId(id);
+		Optional<User> user = findById(id);	
 		if(user.isPresent()) {
-			return userRepository.save(newUser);
+			user.get().setNumber(newUser.getNumber());
+			user.get().setName(newUser.getName());
+			user.get().setPassword(newUser.getPassword());
+			return userRepository.save(user.get());
 		}else {
 			return createUser(newUser);
 		}
@@ -68,7 +70,7 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public void deleteUser(Integer id) {
 		
-		Optional<User> user = findUserById(id);	
+		Optional<User> user = findById(id);	
 		if(user.isPresent()) {
 			user.get().setActive(false);
 			
@@ -78,8 +80,7 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public User findByEmail(String email) {
-		// TODO Auto-generated method stub
-		return null;
+	public Optional<User> findByEmail(String email) {
+		return userRepository.findByEmail(email);
 	}
 }
