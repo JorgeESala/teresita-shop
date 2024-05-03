@@ -1,10 +1,13 @@
 package com.example.demo.service.impl;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.demo.model.CartProduct;
 import com.example.demo.repository.CartProductRepository;
+import com.example.demo.repository.CartRepository;
 import com.example.demo.service.CartProductService;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -29,6 +32,11 @@ public class CartProductServiceImpl implements CartProductService{
                      .setParameter(2, productId)
                      .setParameter(3, quantity)
                      .executeUpdate();
+	}
+
+	@Override
+	public List<CartProduct> findByCartId(Integer cartId) {
+		return cartProductRepository.findByCartId(cartId);
 	}
 
 	
