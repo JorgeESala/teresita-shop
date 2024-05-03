@@ -16,7 +16,6 @@ import lombok.ToString;
 
 @Entity
 @Table(name = "carritos")
-@ToString
 public class Cart {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
