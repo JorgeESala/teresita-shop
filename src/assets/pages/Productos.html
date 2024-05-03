@@ -2,236 +2,244 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, target-densitydpi=device-dpi">
-  <title>Productos</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, target-densitydpi=device-dpi">
+    <title>Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link
-    href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Kode+Mono:wght@400..700&display=swap"
-    rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Kode+Mono:wght@400..700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="../css/Navbar.css" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="../css/productos.css">
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Kode+Mono:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Kode+Mono:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/Navbar.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/productos.css">
 </head>
+
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <!-- Contenedor del logo -->
-            <img src="../img/LogoConTitulo.png" alt="" class="logo">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <!-- Contenedor del logo -->
+                <img src="../img/LogoConTitulo.png" alt="" class="logo">
 
-            <div id="navbar-icons" class="order-lg-5 "> <!-- Agregamos una clase para flexbox -->
-                
-                <!-- <a href="#"><img id='lupabuscar' src="./img/lupa.png" alt="buscar"></a> -->
-                <a href="./SignUp.html"><img id='imgUsuario2' class="" src="../img/ninja-unscreen.gif"
-                        alt="Usuario"></a>
-                <a id="linkCarro" class="linkcarro position-relative" href="./Carrito.html" ><img id="imgcarro" src="../img/carro.png"
-                    alt="Usuario"></a>
-            </div>
+                <div id="navbar-icons" class="order-lg-5 "> <!-- Agregamos una clase para flexbox -->
 
-            <!-- Contenedor del menú de hamburguesa -->
-            <button id="navButton" class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                    <!-- <a href="#"><img id='lupabuscar' src="./img/lupa.png" alt="buscar"></a> -->
+                    <a href="./SignUp.html"><img id='imgUsuario2' class="" src="../img/ninja-unscreen.gif"
+                            alt="Usuario"></a>
+                    <a id="linkCarro" class="linkcarro position-relative" href="./Carrito.html"><img id="imgcarro"
+                            src="../img/carro.png" alt="Usuario"></a>
+                </div>
 
-            <!-- Contenido del menú de navegación -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav w-100 mx-auto justify-content-around order-0">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" href="./Productos.html" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Productos
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./Productos.html">Lista de productos</a></li>
-                            <li><a class="dropdown-item" href="./Agregar-Productos.html">Agregar productos</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="./Publicaciones.html" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Publicaciones
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Lista de publicaciones </a></li>
-                            <li><a class="dropdown-item" href="#">Agregar publicación</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-disabled="true" href="./Nosotros.html">
-                            Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-disabled="true" href="./Contacto.html">Contacto</a>
-                    </li>
-                </ul>
-            </div>
+                <!-- Contenedor del menú de hamburguesa -->
+                <button id="navButton" class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Contenido del menú de navegación -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav w-100 mx-auto justify-content-around order-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" href="./Productos.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./Productos.html">Lista de productos</a></li>
+                                <li><a class="dropdown-item" href="./Agregar-Productos.html">Agregar productos</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="./Publicaciones.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Publicaciones
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Lista de publicaciones </a></li>
+                                <li><a class="dropdown-item" href="#">Agregar publicación</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-disabled="true" href="./Nosotros.html">
+                                Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-disabled="true" href="./Contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
                 <form id="searchForm" class="d-inline-block" role="search">
                     <input class="form-control" type="search" placeholder="Search" aria-label="Search">
                     <button type="submit"><img src="../img/lupa.png" alt="buscar"></button>
                 </form>
 
-        </div>
-    </nav>
-    <h1 class="title text-center">Productos</h1>
-</header>
-<main class="d-flex">
-    <section id="show-product" class="w-25 bg-white align-self-lg-start container pt-3 position-sticky">
-        <div class="position-relative">
-            
-            <a id="anchor-img"><img id="product-img" src="../img/Gorro Ace.jpg" class="img-fluid position-relative" alt="" srcset="">
-                <span id="close-img" class="button position-absolute top-0 end-0">X</span>
-            </a>
-            
-            
-            <h4 id="product-name" class="text-center">Gorro de Ace</h4>
-            <p id="product-description"> Gorro para adulto del personaje Ace</p>
-            <p id="product-price"><b>Precio:</b> $140</p>
-            <p id="product-quantity"><b>Disponibles: </b> 3</p>
-            <p id="product-category"> <b>Categorías:</b> One piece, Cosplay, Sombrero</p>
-            <hr>
-            <p class="text-center"><b>Cantidad</b></p>
-            <div class="quantity-selector">
-    
-                <input id="productInput" value="1" class="form-control text-center mb-3" type="number" min="0" />
             </div>
-    
-            <button onclick="agregarAlCarrito(productInput.value)" class="button w-100 mb-3">
-                Agregar al carrito
-              </button>
-        </div>
-        
-          <!-- <button href="#" class="button w-100 mb-3">
+        </nav>
+        <h1 class="title text-center">Productos</h1>
+    </header>
+    <main class="d-flex">
+        <section id="show-product" class="w-25 bg-white align-self-lg-start container pt-3 position-sticky">
+            <div class="position-relative">
+
+                <a id="anchor-img" class="d-flex">
+                    <img id="product-img" src="../img/Gorro Ace.jpg" class="img-fluid position-relative m-auto" alt=""
+                        srcset="" style="max-height: 220px;">
+                    <span id="close-img" class="button position-absolute top-0 end-0">X</span>
+                </a>
+
+
+                <h4 id="product-name" class="text-center">Gorro de Ace</h4>
+                <p id="product-description"> Gorro para adulto del personaje Ace</p>
+                <p id="product-price"><b>Precio:</b> $140</p>
+                <p id="product-quantity"><b>Disponibles: </b> 3</p>
+                <p id="product-category"> <b>Categorías:</b> One piece, Cosplay, Sombrero</p>
+                <hr>
+                <p class="text-center"><b>Cantidad</b></p>
+                <div class="quantity-selector">
+
+                    <input id="productInput" value="1" class="form-control text-center mb-3" type="number" min="0" />
+                </div>
+
+                <button onclick="agregarAlCarrito(productInput.value)" class="button w-100 mb-3">
+                    Agregar al carrito
+                </button>
+            </div>
+
+            <!-- <button href="#" class="button w-100 mb-3">
             Comprar ahora
           </button> -->
-    </section>
+        </section>
 
-    <section class="mb-3 text-center" id="product-container">
-      <div class="justify-content-center container-fluid">
-        <div class="row" id="list-items">
-        </div>
-    </section>
-</main>
-<footer class="bg-ligh tex-dark pt-5 pb-4 mt-4">
-    <div class="container tex-center text-md-start">
-        <div class="row text-center text-md-start">
+        <section class="mb-3 text-center" id="product-container">
+            <div class="justify-content-center container-fluid">
+                <div class="row" id="list-items">
+                </div>
+        </section>
+    </main>
+    <footer class="bg-ligh tex-dark pt-5 pb-4 mt-4">
+        <div class="container tex-center text-md-start">
+            <div class="row text-center text-md-start">
 
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 font-weinght-bold text-primary paragraph"> Sobre Nosotros</h5>
-                <hr class="mb-4">
-                <p class="footer-size">
-                    ¡Bienvenido a Teresita! Nos enorgullece ofrecer un destino único para los amantes del ánime y la
-                    cultura japonesa.
-                </p>
-
-
-
-            </div>
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
-                <h5 class="text-uppercase mb-4 font-weinght-bold text-primary paragraph">¡Déjanos Ayudarte!</h5>
-                <hr class="mb-4">
-                <p>
-                    <a href="./SignUp.html" class="tex-dark footer-size" target="_blank">Crear Cuenta</a>
-                </p>
-                <p>
-                    <a href="./info-policies.html" class="tex-dark footer-size" target="_blank">Compras</a>
-                </p>
-                <p>
-                    <a href="./info-policies.html#preg-frec" class="tex-dark footer-size" target="_blank">Preguntas
-                        frecuentes</a>
-                </p>
-                <p>
-                    <a href="./info-policies.html#env-dev" class="tex-dark footer-size" target="_blank">Envíos y
-                        devoluciones </a>
-                </p>
-            </div>
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weinght-bold text-primary paragraph"> Sobre Nosotros</h5>
+                    <hr class="mb-4">
+                    <p class="footer-size">
+                        ¡Bienvenido a Teresita! Nos enorgullece ofrecer un destino único para los amantes del ánime y la
+                        cultura japonesa.
+                    </p>
 
 
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
-                <h5 class="text-uppercase mb-4 font-weinght-bold text-primary paragraph">Términos legales</h5>
-                <hr class="mb-4">
-                <p>
-                    <a href="./info-policies.html#ter-cond" class="tex-dark footer-size" target="_blank"> Términos y
-                        Condiciones </a>
-                </p>
-                <p>
-                    <a href="./info-policies.html#pol-priv" class="tex-dark footer-size" target="_blank"> Políticas de
-                        privacidad </a>
-                </p>
-                <p>
-                    <a href="./info-policies.html#pol-dev-can" class="tex-dark footer-size" target="_blank">Política de
-                        devolución y
-                        cancelación </a>
-                </p>
-                <p>
-                    <a href="./info-policies.html#pol-env" class="tex-dark footer-size" target="_blank"> Política de
-                        envíos </a>
-                </p>
-            </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
-                <h5 class="text-uppercase mb-4 font-weinght-bold text-primary paragraph">¡Contacto!</h5>
-                <hr class="mb-4">
-                <p>
-                    <li class="fas fa-home me-3 footer-size"></li>Felipe Carrillo Puerto, Quintana Roo, México
-                </p>
-
-                <p>
-                    <li class="fas fa-envelope me-3 footer-size"></li><a
-                        href="mailto:teresitashop@gmail.com">teresitashop@gmail.com</a>
-                </p>
-
-                <p>
-                    <li class="fas fa-phone me-3 footer-size"></li>9831381485
-                </p>
-                <div class="tex-center">
-                    <ul class="list-unstyled list-inline">
-                        <li class="list-inline-item">
-                            <a href="https://www.facebook.com/teresitakawai" class="tex-dark" target="_blank"> <i
-                                    class="fab fa-facebook"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="tex-dark"> <i class="fab fa-twitter"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="tex-dark"> <i class="fab fa-google-plus"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="tex-dark"> <i class="fab fa-linkedin-in"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#" class="tex-dark"> <i class="fab fa-youtube"></i></a>
-                        </li>
-                    </ul>
 
                 </div>
-            </div>
-            <div class="mb-4 text-center">
-                <p><i class="fa-regular fa-copyright footer-size"></i> Todos los derechos reservados
-                    <a href="#">
-                        <strong class="text-primary"></strong>
-                    </a>
-                </p>
-            </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
+                    <h5 class="text-uppercase mb-4 font-weinght-bold text-primary paragraph">¡Déjanos Ayudarte!</h5>
+                    <hr class="mb-4">
+                    <p>
+                        <a href="./SignUp.html" class="tex-dark footer-size" target="_blank">Crear Cuenta</a>
+                    </p>
+                    <p>
+                        <a href="./info-policies.html" class="tex-dark footer-size" target="_blank">Compras</a>
+                    </p>
+                    <p>
+                        <a href="./info-policies.html#preg-frec" class="tex-dark footer-size" target="_blank">Preguntas
+                            frecuentes</a>
+                    </p>
+                    <p>
+                        <a href="./info-policies.html#env-dev" class="tex-dark footer-size" target="_blank">Envíos y
+                            devoluciones </a>
+                    </p>
+                </div>
 
 
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
+                    <h5 class="text-uppercase mb-4 font-weinght-bold text-primary paragraph">Términos legales</h5>
+                    <hr class="mb-4">
+                    <p>
+                        <a href="./info-policies.html#ter-cond" class="tex-dark footer-size" target="_blank"> Términos y
+                            Condiciones </a>
+                    </p>
+                    <p>
+                        <a href="./info-policies.html#pol-priv" class="tex-dark footer-size" target="_blank"> Políticas
+                            de
+                            privacidad </a>
+                    </p>
+                    <p>
+                        <a href="./info-policies.html#pol-dev-can" class="tex-dark footer-size" target="_blank">Política
+                            de
+                            devolución y
+                            cancelación </a>
+                    </p>
+                    <p>
+                        <a href="./info-policies.html#pol-env" class="tex-dark footer-size" target="_blank"> Política de
+                            envíos </a>
+                    </p>
+                </div>
+
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
+                    <h5 class="text-uppercase mb-4 font-weinght-bold text-primary paragraph">¡Contacto!</h5>
+                    <hr class="mb-4">
+                    <p>
+                        <li class="fas fa-home me-3 footer-size"></li>Felipe Carrillo Puerto, Quintana Roo, México
+                    </p>
+
+                    <p>
+                        <li class="fas fa-envelope me-3 footer-size"></li><a
+                            href="mailto:teresitashop@gmail.com">teresitashop@gmail.com</a>
+                    </p>
+
+                    <p>
+                        <li class="fas fa-phone me-3 footer-size"></li>9831381485
+                    </p>
+                    <div class="tex-center">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a href="https://www.facebook.com/teresitakawai" class="tex-dark" target="_blank"> <i
+                                        class="fab fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="tex-dark"> <i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="tex-dark"> <i class="fab fa-google-plus"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="tex-dark"> <i class="fab fa-linkedin-in"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="tex-dark"> <i class="fab fa-youtube"></i></a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="mb-4 text-center">
+                    <p><i class="fa-regular fa-copyright footer-size"></i> Todos los derechos reservados
+                        <a href="#">
+                            <strong class="text-primary"></strong>
+                        </a>
+                    </p>
+                </div>
+
+
+            </div>
         </div>
-    </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-<script src="../js/lista-de-productos.js"></script>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="../js/lista-de-productos.js"></script>
 </body>
 
 </html>
