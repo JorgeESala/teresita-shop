@@ -11,9 +11,6 @@ import lombok.ToString;
 
 @Entity
 @Table(name = "usuarios")
-@NoArgsConstructor
-@ToString
-@AllArgsConstructor
 public class User {
 
 	@Id
