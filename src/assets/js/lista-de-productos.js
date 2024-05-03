@@ -70,9 +70,8 @@ function cargarProducto(item){
     name.innerHTML = item.name;
     description.innerHTML = item.description;
     price.innerHTML = `<b>Precio: </b> $${item.price}`;
-    quantity.innerHTML = `<b>Disponibles: </b> ${item.quantity}`;
-    category.innerHTML =`<b> Categorias: </b> ${item.category}`;
-    input.setAttribute('max', item.quantity);
+    quantity.innerHTML = `<b>Disponibles: </b> ${item.stock}`;
+    input.setAttribute('max', item.stock);
     input.value = 1;
     openProductsMovil();
 }
