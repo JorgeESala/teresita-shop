@@ -54,13 +54,13 @@ signupForm.addEventListener("submit", (e) => {
 
   // Crear objeto de usuario
   const newUser = {
-    name: name,
-    number: number,
-    email: email,
-    password: password,
-    password1: password1,
+    name: name.value,
+    number: number.value,
+    email: email.value,
+    password: password.value,
+    role:"1"
   };
-
+  console.log(JSON.stringify(newUser));
   // Enviar solicitud POST a la API para registrar el usuario
   fetch("http://localhost:8080/api/users", {
     method: "POST",
@@ -84,21 +84,21 @@ signupForm.addEventListener("submit", (e) => {
       }
     })
     .catch((error) => {
-      showAlert(error.message);
+      // showAlert(error.message);
     });
 });
 
-function showAlert(message, element, type = "danger") {
-  const existingAlert = document.querySelector(".alert");
-  if (existingAlert) existingAlert.remove();
+// function showAlert(message, element, type = "danger") {
+//   const existingAlert = document.querySelector(".alert");
+//   if (existingAlert) existingAlert.remove();
 
-  const alertTemplate = `
-    <div class="alert alert-${type} alert-dismissible fade show" role="alert">
-      ${message}
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-  `;
-  element.insertAdjacentHTML("beforebegin", alertTemplate);
-  const alertElement = document.querySelector(".alert");
-  alertElement.scrollIntoView({ behavior: "smooth" });
-}
+//   const alertTemplate = `
+//     <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+//       ${message}
+//       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+//     </div>
+//   `;
+//   element.insertAdjacentHTML("beforebegin", alertTemplate);
+//   const alertElement = document.querySelector(".alert");
+//   alertElement.scrollIntoView({ behavior: "smooth" });
+// }
