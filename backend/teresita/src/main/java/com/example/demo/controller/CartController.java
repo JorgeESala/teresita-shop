@@ -1,6 +1,5 @@
 package com.example.demo.controller;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,7 +56,7 @@ public class CartController {
 		Integer productId = cartProductRequest.getProductId();
 		Integer quantity = cartProductRequest.getQuantity();
 		Product product = productService.findById(productId);
-		Optional<Cart> optionalCart = cartService.findById(userId);
+		Optional<Cart> optionalCart = cartService.findByUserId(userId);
 		CartProduct cartProduct;
 		Cart cart;
 		CartProductKey cartProductKey; 

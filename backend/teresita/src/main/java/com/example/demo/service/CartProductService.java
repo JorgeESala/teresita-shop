@@ -8,5 +8,6 @@ public interface CartProductService {
 	
 	CartProduct createCartProduct(CartProduct cartproduct);
 	List<CartProduct> findByCartId(Integer cartUd);
+	List<CartProduct> findByUserId(Integer userId);
 	
 }

@@ -21,7 +21,7 @@ public class CartProductController {
 	CartProductService cartProductService;
 	
 	@GetMapping("{userId}")
-	List<CartProduct> findByCartId(@PathVariable("userId") Integer cartId){
-		return cartProductService.findByCartId(cartId);
+	List<CartProduct> findByUserId(@PathVariable("userId") Integer userId){
+		return cartProductService.findByUserId(userId);
 	}
 }
