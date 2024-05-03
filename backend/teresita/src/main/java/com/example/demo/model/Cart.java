@@ -2,6 +2,7 @@ package com.example.demo.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,12 +12,12 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.ToString;
 
 @Entity
 @Table(name = "carritos")
-@ToString
 public class Cart {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,59 +25,57 @@ public class Cart {
 	@Column(name = "usuario_id")
 	Integer userId;
 	
-	@ManyToMany
-    @JoinTable(
-        name = "carritos_has_productos",
-        joinColumns = @JoinColumn(name = "carrito_id"),
-        inverseJoinColumns = @JoinColumn(name = "producto_id")
-    )
-	
-	private List<Product> products = new ArrayList<>();
+	@OneToMany(mappedBy = "cart")
+	private Set<CartProduct> cartProducts;
 	
 	
 	public Cart() {
 		super();
 	}
-	public Cart(Integer id, Integer user_id, List<Product> products) {
-		super();
-		this.id = id;
-		this.userId = user_id;
-		this.products = products;
-	}
-	public Cart(Integer id, Integer user_id, Product product) {
-		super();
-		this.id = id;
-		this.userId = user_id;
-		this.products.add(product);
-	}
-	public Cart( Integer user_id, List<Product> products) {
-		super();
-		this.userId = user_id;
-		this.products = products;
-	}
-	public Cart(Integer user_id, Product product) {
-		super();
-		this.userId = user_id;
-		this.products.add(product);
-	}
-	
+
+
 	public Integer getId() {
 		return id;
 	}
+
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public Integer getUser_id() {
+
+
+	public Integer getUserId() {
 		return userId;
 	}
-	public void setUser_id(Integer user_id) {
-		this.userId = user_id;
+
+
+	public void setUserId(Integer userId) {
+		this.userId = userId;
 	}
-	public List<Product> getProducts() {
-		return products;
+
+
+	public Set<CartProduct> getCartProducts() {
+		return cartProducts;
 	}
-	public void setProducts(List<Product> products) {
-		this.products = products;
+
+
+	public void setCartProducts(Set<CartProduct> cartProducts) {
+		this.cartProducts = cartProducts;
+	}
+
+
+	public Cart(Integer id, Integer userId, Set<CartProduct> cartProducts) {
+		super();
+		this.id = id;
+		this.userId = userId;
+		this.cartProducts = cartProducts;
+	}
+
+
+	public Cart(Integer id, Integer userId) {
+		super();
+		this.id = id;
+		this.userId = userId;
 	}
 	
 	

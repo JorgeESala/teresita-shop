@@ -1,6 +1,20 @@
 {
   "cSpell.words": [
-    "lupabuscar"
+    "ánime",
+    "Aranza",
+    "Barreto",
+    "Bernal",
+    "Jasiel",
+    "Josafat",
+    "lupabuscar",
+    "mayoreo",
+    "mecatrónica",
+    "Mendieta",
+    "Oxxo",
+    "proactividad",
+    "Vergara",
+    "Yañez"
   ],
-  "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501,
+  "java.compile.nullAnalysis.mode": "disabled"
 }

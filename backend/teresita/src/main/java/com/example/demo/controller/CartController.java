@@ -1,5 +1,9 @@
 package com.example.demo.controller;
 
+<<<<<<< HEAD
+=======
+import java.util.ArrayList;
+>>>>>>> b836a95689dcba2c894791b86a4e906dc012c70c
 import java.util.List;
 import java.util.Optional;
 
@@ -16,9 +20,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.model.Cart;
 import com.example.demo.model.CartProduct;
+import com.example.demo.model.CartProductKey;
 import com.example.demo.model.CartProductRequest;
+<<<<<<< HEAD
+=======
+import com.example.demo.model.Product;
+>>>>>>> b836a95689dcba2c894791b86a4e906dc012c70c
 import com.example.demo.service.CartProductService;
 import com.example.demo.service.CartService;
+import com.example.demo.service.ProductService;
 
 @CrossOrigin(origins = "*")
 @RestController
@@ -31,6 +41,12 @@ public class CartController {
 	@Autowired
 	CartProductService cartProductService;
 	
+<<<<<<< HEAD
+=======
+	@Autowired
+	ProductService productService;
+	
+>>>>>>> b836a95689dcba2c894791b86a4e906dc012c70c
 	public CartController(CartService cartService) {
 		super();
 		this.cartService = cartService;
@@ -51,7 +67,23 @@ public class CartController {
 	ResponseEntity<?> addProductToCart(@RequestBody CartProductRequest cartProductRequest, @PathVariable("userId") Integer userId){
 		Integer productId = cartProductRequest.getProductId();
 		Integer quantity = cartProductRequest.getQuantity();
-		cartService.addProductToCart(userId, productId, quantity);
+		Product product = productService.findById(productId);
+		Optional<Cart> optionalCart = cartService.findById(userId);
+		CartProduct cartProduct;
+		Cart cart;
+		CartProductKey cartProductKey; 
+		
+		if(optionalCart.isPresent()){
+			cart = optionalCart.get();
+		} else {
+			cart = new Cart();
+			cart.setUserId(userId);
+		}
+		
+		cartProductKey = new CartProductKey(cart.getId(), product.getId());
+		cart = cartService.createCart(cart);
+		cartProduct = new CartProduct(cartProductKey,cart,product,quantity);
+		cartProductService.createCartProduct(cartProduct);
 		return ResponseEntity.status(HttpStatus.CREATED).body("Creado");
 	}
 	

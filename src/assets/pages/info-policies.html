@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información y políticas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Kode+Mono:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Kode+Mono:wght@400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/Navbar.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <!-- Contenedor del logo -->
+                <img src="../img/LogoConTitulo.png" alt="" class="logo">
+
+                <div id="navbar-icons" class="order-lg-5 "> <!-- Agregamos una clase para flexbox -->
+
+                    <!-- <a href="#"><img id='lupabuscar' src="./img/lupa.png" alt="buscar"></a> -->
+                    <a href="./SignUp.html"><img id='imgUsuario2' class="" src="../img/ninja-unscreen.gif"
+                            alt="Usuario"></a>
+                    <a id="linkCarro" class="linkcarro position-relative" href="./Carrito.html"><img id="imgcarro"
+                            src="../img/carro.png" alt="Usuario"></a>
+                </div>
+
+                <!-- Contenedor del menú de hamburguesa -->
+                <button id="navButton" class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Contenido del menú de navegación -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav w-100 mx-auto justify-content-around order-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" href="./Productos.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./Productos.html">Lista de productos</a></li>
+                                <li><a class="dropdown-item" href="./Agregar-Productos.html">Agregar productos</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="./Publicaciones.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Publicaciones
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Lista de publicaciones </a></li>
+                                <li><a class="dropdown-item" href="#">Agregar publicación</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-disabled="true" href="./Nosotros.html">
+                                Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-disabled="true" href="./Contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                <form id="searchForm" class="d-inline-block" role="search">
+                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                    <button type="submit"><img src="../img/lupa.png" alt="buscar"></button>
+                </form>
+
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="px-5 px-md-0">
+            <div id="terminos-condiciones" style="margin-top: 45px;">
+                <h1 id="ter-cond" class="m-auto text-center my-3 title">Términos y Condiciones</h1>
+                <div class="m-auto col-sm-10 col-lg-8 my-5 paragraph justificado">
+                    <h4>1. Introducción</h4>
+                    <p>Al registrarte y utilizar nuestro sitio web, aceptas estos términos y condiciones en su
+                        totalidad.
+                        Si no estás de acuerdo con estos términos y condiciones o cualquier parte de estos términos y
+                        condiciones,
+                        no debes utilizar nuestro sitio web.</p>
+
+                    <h4 style="margin-top: 30px;">2. Registro y Cuenta</h4>
+                    <p style="text-justify: auto;">Para utilizar ciertas partes de nuestro sitio web, es posible que
+                        debas registrarte para obtener
+                        una cuenta.
+                        Al registrarte, aceptas proporcionar información verdadera, precisa y completa.</p>
+
+                    <h4 style="margin-top: 30px;">3. Privacidad</h4>
+                    <p style="text-justify: auto;">Nos tomamos muy en serio la privacidad de nuestros usuarios. La
+                        información de registro y otra
+                        información sobre ti están sujetas a nuestra Política, nosotros recolectamos la información
+                        personal que nos
+                        das como nombre, dirección y correo electrónico, al igual podremos enviarte correos electrónicos
+                        acerca de nuestra tienda, nuevos productos y otras actualizaciones.</p>
+
+                    <h4 style="margin-top: 30px;">4. Información de Envío</h4>
+                    <p style="text-justify: auto;">Al realizar un pedido, se te pedirá que proporciones una dirección de
+                        envío. Esta información
+                        será utilizada
+                        únicamente para el envío de tu pedido.</p>
+
+                    <h4 style="margin-top: 30px;">5. Pagos</h4>
+                    <p style="text-justify: auto;">Todos los pagos realizados a través de nuestro sitio web son seguros
+                        y cumplen con las normas de
+                        seguridad de
+                        datos de la industria de tarjetas de pago (PCI DSS).</p>
+
+                    <h4 style="margin-top: 30px;">6. Cambios en los Términos y Condiciones</h4>
+                    <p style="text-justify: auto;">Nos reservamos el derecho, a nuestra sola discreción, de cambiar,
+                        modificar, añadir o eliminar
+                        partes de
+                        estos términos y condiciones en cualquier momento. Es tu responsabilidad revisar estos términos
+                        y
+                        condiciones periódicamente para ver si hay cambios.</p>
+                </div>
+            </div>
+
+            <div id="terminos-condiciones" style="margin-top: 45px;">
+                <h1 id="preg-frec" class="m-auto text-center my-3 title">Preguntas frecuentes</h1>
+                <div class="m-auto col-sm-10 col-lg-8 my-5 paragraph justificado">
+                    <h4 style="margin-top: 30px;">1. ¿Existe un mínimo de compra?</h4>
+                    <p style="text-justify: auto;">No tenemos mínimo de compra, sin embargo si compras más de $1,500 MXN
+                        el envío es GRATIS, puedes comprar cualquier
+                        producto que hay en tienda. En ocasiones tenemos promociones, consulta la página principal.</p>
+
+                    <h4 style="margin-top: 30px;">2. ¿Puedo hacer compras menores a $1,500 MXN?</h4>
+                    <p style="text-justify: auto;">Si claro, solo añade el costo del envío vigente a todo México, te
+                        invitamos a que nos visites en
+                        https://teresita/productos para hacer compras menores o por mayoreo.</p>
+
+                    <h4 style="margin-top: 30px;">3. ¿Es seguro comprar con ustedes por internet?</h4>
+                    <p style="text-justify: auto;">100% Seguro, puedes revisar nuestras recomendaciones de compras en
+                        nuestras redes sociales.
+                        Además te invitamos a que nos conozcas en nuestra Tienda Física en donde llevamos más de 15 años
+                        en el mercado. En
+                        Google Maps puedes ver cómo llegar a nuestra tienda física:Papelería y Novedades "Teresita".
+                        En todas tus compras puedes solicitar Factura ya que estamos legalmente constituidos y
+                        establecidos.</p>
+
+                    <h4 style="margin-top: 30px;">4. ¿Qué pasa si no llega mi pedido?</h4>
+                    <p style="text-justify: auto;">Una vez que hiciste tu compra, te enviamos: Nota, Factura y Número de
+                        Guía, con el número de guía puedes rastrear en qué
+                        punto va tu envío. En caso de que exista algún inconveniente no hay problema ya que tu pedido va
+                        asegurado: nosotros te
+                        repondremos inmediatamente tu pedido enviándolo de nuevo. Todos los pedidos solicitan una firma
+                        al momento de la
+                        recepción para asegurarnos de que lo recibiste en perfecto estado.
+                        Por último te compartimos, todos los pedidos llevan un estricto proceso de surtido, empaque y
+                        transporte; se revisa que
+                        toda la mercancía esté en perfecto estado y se revisa 2 veces antes de cerrar las cajas evitando
+                        faltantes.</p>
+
+                    <h4 style="margin-top: 30px;">5. ¿Los precios son más IVA?</h4>
+                    <p style="text-justify: auto;">Todos nuestros precios YA incluyen IVA.</p>
+
+                    <h4 style="margin-top: 30px;">6. ¿Tienen Catálogo y Lista de Precios?</h4>
+                    <p style="text-justify: auto;">La Tienda Virtual es nuestro catálogo y lista de precios al mismo
+                        tiempo, dado que nos llegan varias decenas de modelos
+                        nuevos constantemente no nos resulta práctico estar subiendo foto de cada uno de los modelos
+                        disponibles, por lo que se
+                        envían modelos surtidos altamente vendibles, cuando es por color o diseño específico (puntos,
+                        rayas, etc.) si puedes
+                        elegir por diseño.</p>
+
+                    <h4 style="margin-top: 30px;">7. ¿Qué formas de pago aceptan?</h4>
+                    <p style="text-justify: auto;">Tarjeta de Débito, Crédito (VISA y MASTERCARD), Oxxo, Depósito en
+                        Efectivo y Transferencia Interbancaria.</p>
+                </div>
+            </div>
+
+            <div id="terminos-condiciones" style="margin-top: 45px;">
+                <h1 id="env-dev" class="m-auto text-center my-3 title">Envíos y devoluciones</h1>
+                <div class="m-auto col-sm-10 col-lg-8 my-5 paragraph justificado">
+                    <h4 style="margin-top: 30px;">1. ¿En cuanto tiempo me llega mi pedido?</h4>
+                    <p style="text-justify: auto;">Una vez verificado tu pago, generamos la guía de 24 a 48 hrs, una vez
+                        que ha sido generada, contempla los siguientes
+                        tiempos de entrega:</p>
+
+                    <p>Zona Sur de la República: Mismo Día
+                        CDMX e Interior de la República Mexicana: 3-5 días hábiles</p>
+
+                    <p>En <strong>Zonas Extendidas</strong> la entrega puede variar de 5 a 7 días hábiles, le sugerimos
+                        verificar si su Código Postal es
+                        considerado ZONA EXTENDIDA: <a href="http://zonaextendida.com/"
+                            target="_blank"><strong>http://zonaextendida.com/</strong></a>
+                        *Todos los pedidos que se confirman en pago antes de las 12 hrs (Hora Sur, se procesan para su
+                        envío dentro de 1-2 días
+                        hábiles después del procesamiento.)
+                        **Todos los pedidos se envían principalmente por FedEx, Estafeta o Paquetería del mismo Nivel.
+                    </p>
+
+                    <p><strong><u>POR TEMPORADA ALTA (14 de Febrero, 10 de Mayo, Escolar y 24 de Diciembre) es altamente
+                                probable que existan
+                                severos atrasos por alta demanda en todas las paqueterías de hasta 10 o más días
+                                adicionales a los compartidos.
+                                Sugerimos tomar precauciones previniendo esta situación.</u></strong></p>
+
+                    <h4 style="margin-top: 30px;">2. ¿Puedo hacer devoluciones?</h4>
+                    <p style="text-justify: auto;">Todos nuestros pedidos son al mayoreo en firme y/o de temporada, es
+                        decir, ya que el cliente los eligió; no hacemos
+                        cambios ni devoluciones, en el remoto caso que algún producto llegue dañado, te solicitamos
+                        tomar fotografía del mismo y
+                        enviarnos un mail a <a href="mailto:teresitashop@gmail.com">teresitashop@gmail.com</a>, para mandar reclamación a paquetería y solicitar el
+                        reembolso de los
+                        productos dañados.</p>
+                </div>
+            </div>
+
+            <div id="terminos-condiciones" style="margin-top: 45px;">
+                <h1 id="pol-priv" class="m-auto text-center my-3 title">Políticas de privacidad</h1>
+                <div class="m-auto col-sm-10 col-lg-8 my-5 paragraph justificado">
+                    <h4 style="margin-top: 30px;">1. Declaración de privacidad</h4>
+                    <p style="text-justify: auto;">Cuando compras algo de nuestra tienda, como parte del proceso de
+                        compra venta, nosotros recolectamos la información
+                        personal que nos das como nombre, dirección y correo electrónico. Con tu consentimiento podremos
+                        enviarte correos
+                        electrónicos acerca de nuestra tienda, nuevos productos y otras actualizaciones.</p>
+
+                    <h4 style="margin-top: 30px;">2. ¿Cómo obtienen mi consentimiento?</h4>
+                    <p style="text-justify: auto;">Cuando nos provees tu información personal para completar una
+                        transacción, verificar tu tarjeta de débito/ crédito,
+                        crear una orden, concertar un envío o hacer una devolución , implicamos que aceptamos la
+                        recolección y uso por esa razón
+                        específica, solamente.
+                        Si te solicitamos tu información personal por motivos de marketing, te pediremos directamente tu
+                        expreso consentimiento
+                        o te daremos la oportunidad de negarte.</p>
+
+                    <h4 style="margin-top: 30px;">3. ¿Cómo puedo anular mi consentimiento?</h4>
+                    <p style="text-justify: auto;">Si luego de haber aceptado cambias de opinión, puedes anular tu
+                        consentimiento para que te contactemos, por la
+                        recolección, uso o divulgación de tu información en cualquier momento, escribiéndonos a <a
+                            href="mailto:teresitashop@gmail.com">teresitashop@gmail.com</a>
+                        solicitando la cancelación y la anulación de la información de contacto.
+                        Nos reservamos el derecho de modificar esta política de privacidad en cualquier momento, así que
+                        por favor revísela
+                        frecuentemente. Cambios y aclaraciones entrarán en vigencia inmediatamente después de su
+                        publicación en el sitio web. Si
+                        hacemos cambios materiales a esta política, notificaremos aquí que ha sido actualizada, por lo
+                        que cual estás enterado
+                        de qué información recopilamos, cómo y bajo qué circunstancias, si las hubiere, la utilizamos
+                        y/o divulgamos.</p>
+                </div>
+            </div>
+
+            <div id="terminos-condiciones" style="margin-top: 45px;">
+                <h1 id="pol-dev-can" class="m-auto text-center my-3 title">Política de devolución y cancelación</h1>
+                <div class="m-auto col-sm-10 col-lg-8 my-5 paragraph justificado">
+                    <p style="text-justify: auto;">Todos nuestros pedidos son al mayoreo en firme y/o de temporada, es
+                        decir, ya que el cliente los eligió; no hacemos
+                        cambios ni devoluciones, en el remoto caso que algún producto llegue dañado, te solicitamos
+                        tomar fotografía del mismo y
+                        enviarnos un mail a <a href="mailto:teresitashop@gmail.com">teresitashop@gmail.com</a>, para
+                        mandar reclamación a paquetería y solicitar el reembolso de los
+                        productos dañados.
+
+                        El cliente dispondrá de un plazo de 5 días naturales desde la recepción del pedido para resolver
+                        el contrato de compra y
+                        solicitar el cambio del producto adquirido. Así mismo, el pedido devuelto deberá ser entregado
+                        junto con la Nota de
+                        Venta que viene dentro de su pedido y en su caso Factura emitida por Teresita Shop, corriendo el
+                        cliente con los gastos
+                        de devolución.
+
+                        No se admiten devoluciones fuera del plazo.
+
+                        En caso de cancelación <a href="https://teresita-shop.netlify.app/">Teresita Shop</a> garantiza
+                        a sus clientes la posibilidad de anular su pedido en cualquier momento y
+                        sin ningún costo siempre que la anulación se comunique antes de que el pedido haya sido puesto a
+                        disposición del
+                        transportista para su envío.</p>
+                </div>
+            </div>
+
+            <div id="terminos-condiciones" style="margin-top: 45px;">
+                <h1 id="pol-env" class="m-auto text-center my-3 title">Política de envíos</h1>
+                <div class="m-auto col-sm-10 col-lg-8 my-5 paragraph justificado">
+                    <h4 style="margin-top: 30px;">1. Ámbito de envío nacional e internacional</h4>
+                    <p style="text-justify: auto;">Los pedidos se procesarán y enviarán únicamente en territorio nacional. No ofrecemos envíos internacionales en este
+                    momento.</p>
+
+                    <h4 style="margin-top: 30px;">2. Tiempo de Procesamiento</h4>
+                    <p style="text-justify: auto;">Los pedidos se procesarán y enviarán dentro de un plazo de 1-2 días hábiles después de que se haya confirmado el pago.</p>
+
+                    <h4 style="margin-top: 30px;">3. Seguimiento de pedidos</h4>
+                    <p style="text-justify: auto;">Proporcionaremos un número de seguimiento para cada pedido enviado, lo que permitirá a los clientes rastrear su paquete
+                    hasta que se entregue.</p>
+
+                    <h4 style="margin-top: 30px;">4.Dirección de Envío</h4>
+                    <p style="text-justify: auto;">Es responsabilidad del cliente proporcionar la dirección de envío correcta al realizar el pedido. Nosotros no nos
+                    hacemos responsables de los pedidos enviados a direcciones incorrectas proporcionadas por el cliente</p>
+
+                    <h4 style="margin-top: 30px;">5. Retrasos en el Envío</h4>
+                    <p style="text-justify: auto;">En ocasiones, pueden surgir retrasos en los envíos debido a circunstancias fuera de nuestro control, como condiciones
+                    climáticas extremas o problemas con el transportista. En tales casos, haremos todo lo posible para informar a nuestros
+                    clientes sobre cualquier retraso y resolver la situación de la manera más rápida y eficiente posible.</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer class="bg-ligh tex-dark pt-5 pb-4 mt-4">
+        <div class="container tex-center text-md-start">
+            <div class="row text-center text-md-start">
+    
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weinght-bold text-primary paragraph"> Sobre Nosotros</h5>
+                    <hr class="mb-4">
+                    <p class="footer-size">
+                        ¡Bienvenido a Teresita! Nos enorgullece ofrecer un destino único para los amantes del ánime y la
+                        cultura japonesa.
+                    </p>
+    
+    
+    
+                </div>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
+                    <h5 class="text-uppercase mb-4 font-weinght-bold text-primary paragraph">¡Déjanos Ayudarte!</h5>
+                    <hr class="mb-4">
+                    <p>
+                        <a href="./SignUp.html" class="tex-dark footer-size">Crear Cuenta</a>
+                    </p>
+                    <p>
+                        <a href="./info-policies.html" class="tex-dark footer-size">Compras</a>
+                    </p>
+                    <p>
+                        <a href="./info-policies.html#preg-frec" class="tex-dark footer-size">Preguntas
+                            frecuentes</a>
+                    </p>
+                    <p>
+                        <a href="./info-policies.html#env-dev" class="tex-dark footer-size">Envíos y
+                            devoluciones </a>
+                    </p>
+                </div>
+    
+    
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
+                    <h5 class="text-uppercase mb-4 font-weinght-bold text-primary paragraph">Términos legales</h5>
+                    <hr class="mb-4">
+                    <p>
+                        <a href="./info-policies.html#ter-cond" class="tex-dark footer-size"> Términos y
+                            Condiciones </a>
+                    </p>
+                    <p>
+                        <a href="./info-policies.html#pol-priv" class="tex-dark footer-size"> Políticas de
+                            privacidad </a>
+                    </p>
+                    <p>
+                        <a href="./info-policies.html#pol-dev-can" class="tex-dark footer-size">Política de
+                            devolución y
+                            cancelación </a>
+                    </p>
+                    <p>
+                        <a href="./info-policies.html#pol-env" class="tex-dark footer-size"> Política de
+                            envíos </a>
+                    </p>
+                </div>
+    
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-2">
+                    <h5 class="text-uppercase mb-4 font-weinght-bold text-primary paragraph">¡Contacto!</h5>
+                    <hr class="mb-4">
+                    <p>
+                        <li class="fas fa-home me-3 footer-size"></li>Felipe Carrillo Puerto, Quintana Roo, México
+                    </p>
+    
+                    <p>
+                        <li class="fas fa-envelope me-3 footer-size"></li><a
+                            href="mailto:teresitashop@gmail.com">teresitashop@gmail.com</a>
+                    </p>
+    
+                    <p>
+                        <li class="fas fa-phone me-3 footer-size"></li>9831381485
+                    </p>
+                    <div class="tex-center">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a href="https://www.facebook.com/teresitakawai" class="tex-dark" target="_blank"> <i
+                                        class="fab fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="tex-dark"> <i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="tex-dark"> <i class="fab fa-google-plus"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="tex-dark"> <i class="fab fa-linkedin-in"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="tex-dark"> <i class="fab fa-youtube"></i></a>
+                            </li>
+                        </ul>
+    
+                    </div>
+                </div>
+                <div class="mb-4 text-center">
+                    <p><i class="fa-regular fa-copyright footer-size"></i> Todos los derechos reservados
+                        <a href="#">
+                            <strong class="text-primary"></strong>
+                        </a>
+                    </p>
+                </div>
+    
+    
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

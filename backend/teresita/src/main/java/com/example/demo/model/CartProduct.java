@@ -41,6 +41,7 @@ public class CartProduct {
 		this.product = product;
 		this.quantity = quantity;
 	}
+	
 	public CartProduct() {
 		super();
 	}

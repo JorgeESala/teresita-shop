@@ -64,6 +64,27 @@ nav li a:hover {
   }
 }
 
+    #searchForm {
+        position: relative;
+    }
+
+    #searchForm button {
+        position: absolute;
+        right: 5px;
+        top: 2px;
+        border: none;
+        background: none;
+    }
+
+    #searchForm button img {
+        width: 35px;
+        height: 35px;
+    }
+
+    #searchForm input {
+        padding-right: 40px;
+    }
+
 /* Estilos para dispositivos móviles */
 
 @media (max-width: 1199px) {
@@ -72,9 +93,29 @@ nav li a:hover {
     justify-content: end;
     
   }
+  
   #searchForm {
     flex-grow: 1;
-  }
+
+        position: relative;
+    }
+
+    #searchForm button {
+        position: absolute;
+        right: 5px;
+        top: 2px;
+        border: none;
+        background: none;
+    }
+
+    #searchForm button img {
+        width: 35px;
+        height: 35px;
+    }
+
+    #searchForm input {
+        padding-right: 40px;
+    }
   
 }
 

@@ -41,6 +41,7 @@ function showAlert(message, type = "danger") {
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
   `;
-  document.body.insertAdjacentHTML("afterbegin", alertTemplate);
-  window.scrollTo(0, 0);
+  element.insertAdjacentHTML("beforebegin", alertTemplate);
+  const alertElement = document.querySelector(".alert");
+  alertElement.scrollIntoView({ behavior: "smooth" });
 }
