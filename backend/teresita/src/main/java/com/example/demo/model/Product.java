@@ -1,10 +1,13 @@
 package com.example.demo.model;
 
+import java.util.Set;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.ToString;
 
@@ -25,6 +28,9 @@ public class Product {
 	private String image;
 	@Column(nullable = false)
 	private Integer stock;
+	
+	@OneToMany(mappedBy = "product")
+	private Set<CartProduct> cartProducts;
 	
 	public Integer getId() {
 		return id;
@@ -61,6 +67,28 @@ public class Product {
 	}
 	public void setStock(Integer stock) {
 		this.stock = stock;
+	}
+	public Product(Integer id, String name, String description, Double price, String image, Integer stock,
+			Set<CartProduct> cartProducts) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.description = description;
+		this.price = price;
+		this.image = image;
+		this.stock = stock;
+		this.cartProducts = cartProducts;
+	}
+	public Product(String name, String description, Double price, String image, Integer stock) {
+		super();
+		this.name = name;
+		this.description = description;
+		this.price = price;
+		this.image = image;
+		this.stock = stock;
+	}
+	public Product() {
+		super();
 	}
 	
 }

@@ -16,20 +16,27 @@ public class CartProductServiceImpl implements CartProductService{
 	@Autowired
 	CartProductRepository cartProductRepository;
 
-	@PersistenceContext
-    private EntityManager entityManager;
-	
 	@Override
-	@Transactional
-	public void addProduct(Integer cartId, Integer productId, Integer quantity) {
-		
-		String sql = "INSERT INTO carritos_has_productos (carrito_id, producto_id, cantidad) VALUES (?, ?, ?)";
-        entityManager.createNativeQuery(sql)
-                     .setParameter(1, cartId)
-                     .setParameter(2, productId)
-                     .setParameter(3, quantity)
-                     .executeUpdate();
+	public CartProduct createCartProduct(CartProduct cartProduct) {
+		return cartProductRepository.save(cartProduct);
 	}
+
+//	@PersistenceContext
+//    private EntityManager entityManager;
+//	
+//	@Override
+//	@Transactional
+//	public void addProduct(Integer cartId, Integer productId, Integer quantity) {
+//		
+//		String sql = "INSERT INTO carritos_has_productos (carrito_id, producto_id, cantidad) VALUES (?, ?, ?)";
+//        entityManager.createNativeQuery(sql)
+//                     .setParameter(1, cartId)
+//                     .setParameter(2, productId)
+//                     .setParameter(3, quantity)
+//                     .executeUpdate();
+//	}
+
+	
 
 	
 }
