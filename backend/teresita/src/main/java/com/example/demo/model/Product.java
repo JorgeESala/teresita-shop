@@ -10,7 +10,6 @@ import lombok.ToString;
 
 @Entity
 @Table(name = "productos")
-@ToString
 public class Product {
 
 	@Id
@@ -27,6 +26,12 @@ public class Product {
 	@Column(nullable = false)
 	private Integer stock;
 	
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	public String getName() {
 		return name;
 	}

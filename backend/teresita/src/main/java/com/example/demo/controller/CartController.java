@@ -7,10 +7,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.model.Cart;
+import com.example.demo.model.CartProduct;
+import com.example.demo.model.CartProductRequest;
 import com.example.demo.service.CartService;
 
 @RestController
@@ -25,9 +29,9 @@ public class CartController {
 		this.cartService = cartService;
 	}
 
-	@GetMapping("{id}")
-	ResponseEntity<?> findByUserId(@PathVariable("id") Integer id){
-		Optional<Cart> cart = cartService.findByUserId(id);
+	@GetMapping("{userId}")
+	ResponseEntity<?> findByUserId(@PathVariable("userId") Integer userId){
+		Optional<Cart> cart = cartService.findByUserId(userId);
 		if(cart.isPresent()) {
 			return ResponseEntity.ok(cart.get());
 		}else {
@@ -35,6 +39,11 @@ public class CartController {
 		}
 	}
 	
-	
-	
+	@PostMapping("{userId}")
+	ResponseEntity<?> addProductToCart(@RequestBody CartProductRequest cartProductRequest, @PathVariable("userId") Integer userId){
+		Integer productId = cartProductRequest.getProductId();
+		Integer quantity = cartProductRequest.getQuantity();
+		cartService.addProductToCart(userId, productId, quantity);
+		return ResponseEntity.status(HttpStatus.CREATED).body("Creado");
+	}
 }
