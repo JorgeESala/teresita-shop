@@ -20,10 +20,10 @@ public class CartProductServiceImpl implements CartProductService{
 	CartProductRepository cartProductRepository;
 
 
-//	@Override
-//	public List<CartProduct> findById(Integer cartId) {
-//		return cartProductRepository.findById(cartId);
-//	}
+	@Override
+	public List<CartProduct> findByCartId(Integer cartId) {
+		return cartProductRepository.findByCartId(cartId);
+	}
 
 
 	@Override

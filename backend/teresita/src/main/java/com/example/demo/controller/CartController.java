@@ -42,7 +42,6 @@ public class CartController {
 		this.cartService = cartService;
 	}
 	
-
 	@GetMapping("{userId}")
 	ResponseEntity<?> findByUserId(@PathVariable("userId") Integer userId){
 		Optional<Cart> cart = cartService.findByUserId(userId);

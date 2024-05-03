@@ -14,6 +14,6 @@ import jakarta.transaction.Transactional;
 
 public interface CartProductRepository extends CrudRepository<CartProduct, CartProductKey>{
 	
-//	List<CartProduct> findById(Integer userId);
+	List<CartProduct> findByCartId(Integer cartId);
 	
 }

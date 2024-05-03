@@ -7,6 +7,6 @@ import com.example.demo.model.CartProduct;
 public interface CartProductService {
 	
 	CartProduct createCartProduct(CartProduct cartproduct);
-//	List<CartProduct> findById(Integer cartUd);
+	List<CartProduct> findByCartId(Integer cartUd);
 	
 }
