@@ -83,4 +83,16 @@ public class UserServiceImpl implements UserService{
 	public Optional<User> findByEmail(String email) {
 		return userRepository.findByEmail(email);
 	}
+
+	@Override
+	public Boolean login(User user) {
+		Optional<User> optionalUser = findByEmail(user.getEmail());
+		if(optionalUser.isPresent()) {
+			User existingUser = optionalUser.get();
+			if( existingUser.getEmail().equals(user.getEmail())  && existingUser.getPassword().equals(user.getPassword() )) {
+				return true;
+			}
+		}
+		return false;
+	}
 }

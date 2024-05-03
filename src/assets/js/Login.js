@@ -13,7 +13,7 @@ loginForm.addEventListener("submit", (e) => {
   };
 
   // Enviar solicitud POST a la API para autenticar al usuario
-  fetch("http://localhost:8080/api/users", {
+  fetch("http://localhost:8080/api/users/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

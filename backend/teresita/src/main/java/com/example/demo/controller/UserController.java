@@ -50,6 +50,14 @@ public class UserController {
 		User createdUser = userService.createUser(user);
 		return new ResponseEntity<User>( createdUser, HttpStatus.CREATED);
 	}
+	@PostMapping("/login")
+	ResponseEntity<?> login(@RequestBody User user){
+		Boolean loggedUser = userService.login(user);
+		if(loggedUser) {
+			return ResponseEntity.ok(user);
+		}
+		return  ResponseEntity.status( HttpStatus.NOT_FOUND).body("Credenciales incorrectas");
+	}
 	
 	@DeleteMapping("{id}")
 	ResponseEntity<String> deleteUser(@PathVariable("id") Integer id){
