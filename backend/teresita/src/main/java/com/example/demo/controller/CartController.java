@@ -1,9 +1,5 @@
 package com.example.demo.controller;
 
-<<<<<<< HEAD
-=======
-import java.util.ArrayList;
->>>>>>> b836a95689dcba2c894791b86a4e906dc012c70c
 import java.util.List;
 import java.util.Optional;
 
@@ -22,10 +18,7 @@ import com.example.demo.model.Cart;
 import com.example.demo.model.CartProduct;
 import com.example.demo.model.CartProductKey;
 import com.example.demo.model.CartProductRequest;
-<<<<<<< HEAD
-=======
 import com.example.demo.model.Product;
->>>>>>> b836a95689dcba2c894791b86a4e906dc012c70c
 import com.example.demo.service.CartProductService;
 import com.example.demo.service.CartService;
 import com.example.demo.service.ProductService;
@@ -41,12 +34,9 @@ public class CartController {
 	@Autowired
 	CartProductService cartProductService;
 	
-<<<<<<< HEAD
-=======
 	@Autowired
 	ProductService productService;
 	
->>>>>>> b836a95689dcba2c894791b86a4e906dc012c70c
 	public CartController(CartService cartService) {
 		super();
 		this.cartService = cartService;

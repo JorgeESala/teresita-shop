@@ -20,8 +20,8 @@ public class CartProductController {
 	@Autowired
 	CartProductService cartProductService;
 	
-	@GetMapping("{userId}")
-	List<CartProduct> findAllProducts(@PathVariable("userId") Integer userId){
-		return cartProductService.findByCartId(userId);
-	}
+//	@GetMapping("{userId}")
+//	List<CartProduct> findByCartId(@PathVariable("userId") Integer userId){
+//		return cartProductService.findById(userId);
+//	}
 }
