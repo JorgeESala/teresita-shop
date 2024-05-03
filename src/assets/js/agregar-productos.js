@@ -63,7 +63,7 @@ function actualizarListado() {
             const itemHTML = `
                     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 justify-content-center mb-3">
         <div class="card text-center h-100" >
-          <img src="${item.img}" class="mx-auto card-img-top text-center" alt="${item.description}" />
+          <img src="${item.image}" class="mx-auto card-img-top text-center" alt="${item.description}" />
           <div class="card-body">
             <h5 class="card-title subtitle">${item.name}</h5>
             <p class="card-text paragraph">${item.description}</p>
