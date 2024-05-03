@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
 });
 */
-const form = document.querySelector(".formbox");
+const form = document.querySelector("#contactForm");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const name = document.querySelector("#name");
@@ -86,6 +86,7 @@ form.addEventListener("submit", (e) => {
   }
 
   showAlert("Mensaje enviado con éxito!", form, "success");
+  form.submit(); // Envía el formulario
 });
 
 function showAlert(message, element, type = "danger") {
@@ -102,4 +103,3 @@ function showAlert(message, element, type = "danger") {
   const alertElement = document.querySelector(".alert");
   alertElement.scrollIntoView({ behavior: "smooth" });
 }
-  
