@@ -1,5 +1,7 @@
 package com.example.demo.repository;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -11,5 +13,7 @@ import com.example.demo.model.CartProductKey;
 import jakarta.transaction.Transactional;
 
 public interface CartProductRepository extends CrudRepository<CartProduct, CartProductKey>{
+	
+	List<CartProduct> findByCartId(Integer cartId);
 	
 }

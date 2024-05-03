@@ -26,7 +26,7 @@ public class Cart {
 	Integer userId;
 	
 	@OneToMany(mappedBy = "cart")
-	private Set<CartProduct> cartProducts;
+	private List<CartProduct> cart;
 	
 	
 	public Cart() {
@@ -54,22 +54,7 @@ public class Cart {
 	}
 
 
-	public Set<CartProduct> getCartProducts() {
-		return cartProducts;
-	}
 
-
-	public void setCartProducts(Set<CartProduct> cartProducts) {
-		this.cartProducts = cartProducts;
-	}
-
-
-	public Cart(Integer id, Integer userId, Set<CartProduct> cartProducts) {
-		super();
-		this.id = id;
-		this.userId = userId;
-		this.cartProducts = cartProducts;
-	}
 
 
 	public Cart(Integer id, Integer userId) {

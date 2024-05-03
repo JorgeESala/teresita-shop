@@ -1,4 +1,5 @@
 const signupForm = document.querySelector("#signupForm");
+
 signupForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const name = document.querySelector("#name-registro");
@@ -51,34 +52,40 @@ signupForm.addEventListener("submit", (e) => {
     password1.classList.remove("is-invalid");
   }
 
-  const Users = JSON.parse(localStorage.getItem("users")) || [];
-  const isUserRegistered = Users.find((user) => user.email === email.value);
-  if (isUserRegistered) {
-    email.classList.add("is-invalid");
-    return showAlert("El usuario ya esta registrado", email);
-  } else {
-    email.classList.remove("is-invalid");
-  }
+  // Crear objeto de usuario
+  const newUser = {
+    name: name,
+    number: number,
+    email: email,
+    password: password,
+    password1: password1,
+  };
 
-  // Verificación de número de teléfono
-  const isNumberRegistered = Users.find((user) => user.number === number.value);
-  if (isNumberRegistered) {
-    number.classList.add("is-invalid");
-    return showAlert("El número de teléfono ya está registrado", number);
-  } else {
-    number.classList.remove("is-invalid");
-  }
-
-  Users.push({
-    name: name.value,
-    number: number.value,
-    email: email.value,
-    password: password.value,
-    password1: password1.value,
-  });
-  localStorage.setItem("users", JSON.stringify(Users));
-  showAlert("Registro exitoso!", signupForm, "success");
-  window.location.href = "/index.html";
+  // Enviar solicitud POST a la API para registrar el usuario
+  fetch("http://localhost:8080/api/users", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(newUser),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Error al registrar el usuario");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      if (data.message === "El usuario ya está registrado") {
+        showAlert(data.message);
+      } else {
+        showAlert("Registro exitoso!", "success");
+        window.location.href = "/index.html";
+      }
+    })
+    .catch((error) => {
+      showAlert(error.message);
+    });
 });
 
 function showAlert(message, element, type = "danger") {

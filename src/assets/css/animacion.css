@@ -2,7 +2,7 @@
     width: 250px;
     height: 300px;
     margin: 10px 40px;
-    float: left;
+    display: inline-block;
     border: 10px solid #fff;
     overflow: hidden;
     position: relative;
@@ -11,9 +11,11 @@
     cursor: default;
     background: #fff
 }
-.clear{
+
+.clear {
     clear: both;
 }
+
 .view .mask {
     width: 250px;
     height: 300px;
@@ -144,4 +146,4 @@
 
 .imagen-gris {
     filter: grayscale(100%);
-  }
+}

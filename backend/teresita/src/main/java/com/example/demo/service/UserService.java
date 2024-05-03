@@ -15,5 +15,5 @@ public interface UserService {
 	List<User> getAllUsers(boolean isActive);
 	User updateUser(User user, Integer id);
 	void deleteUser(Integer id);
-	
+	Boolean login(User user);
 }
