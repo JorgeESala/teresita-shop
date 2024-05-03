@@ -9,5 +9,5 @@ public interface CartService {
 
 	Optional<Cart> findByUserId(Integer id);
 	Optional<Cart> findById(Integer id);
-	void addProductToCart(Integer cartId, Integer productId, Integer quantity);
+	Cart createCart(Cart cart);
 }
