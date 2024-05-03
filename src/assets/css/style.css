@@ -127,7 +127,10 @@ footer {
 #tel-registro,
 #email-registro,
 #pass-registro,
-#repetir-pass-registro {
+#repetir-pass-registro,
+#name,
+#email,
+#message {
   background-color: #fde9e7;
 }
 
