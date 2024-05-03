@@ -4,12 +4,12 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.example.demo.model.Product;
+import com.example.demo.model.shopping;
 
-public interface shoppingRepository  xtends CrudRepository<shopping, Long>{
+public interface shoppingRepository  extends CrudRepository<shopping, Long>{
 
-	List<ho> findAll();
-	Product findById(Integer id);{
+	List<shopping> findAll();
+	shopping findById(Integer id);{
 
+    }
 }
-
