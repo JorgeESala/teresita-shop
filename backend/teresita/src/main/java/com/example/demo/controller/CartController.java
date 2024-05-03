@@ -17,6 +17,7 @@ import com.example.demo.model.CartProduct;
 import com.example.demo.model.CartProductRequest;
 import com.example.demo.service.CartService;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("api/carts")
 public class CartController {
