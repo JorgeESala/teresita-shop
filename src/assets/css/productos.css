@@ -2,13 +2,9 @@
  se oculta la barra lateral de la página productos*/
  @media (max-width: 991px) {
     #show-product{
-        position: absolute !important;
-
+        
         z-index: 1;
-        width: 100% !important;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        width: 50% !important;
         display: none;
     }
     #product-container {
@@ -17,11 +13,26 @@
     #close-img {
         display: block !important;
       }
+    #main{
+      flex-direction: column;
+    }
+    #show-product p{
+      margin-bottom: .2rem;
+    }
+    #product-img{
+      max-height: 150px;
+    }
   }
 
   @media (min-width: 992px) {
     #show-product{
         display: block !important;
+    }
+    #main{
+      flex-direction: row;
+    }
+    #product-img{
+      max-height: 220px;
     }
   }
 
