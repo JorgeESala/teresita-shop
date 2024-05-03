@@ -66,7 +66,7 @@ function cargarProducto(item){
     const category = document.getElementById("product-category");
     const input = document.getElementById("productInput");
 
-    img.src = item.img;
+    img.src = item.image;
     name.innerHTML = item.name;
     description.innerHTML = item.description;
     price.innerHTML = `<b>Precio: </b> $${item.price}`;
