@@ -6,7 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.model.Cart;
+import com.example.demo.model.CartProduct;
+import com.example.demo.model.CartProductKey;
 import com.example.demo.model.Product;
+import com.example.demo.repository.CartProductRepository;
 import com.example.demo.repository.CartRepository;
 import com.example.demo.repository.ProductRepository;
 import com.example.demo.service.CartService;
@@ -18,7 +21,8 @@ public class CartServiceImpl implements CartService {
 	CartRepository cartRepository;
 	@Autowired
 	ProductRepository productRepository;
-	
+	@Autowired
+	CartProductServiceImpl cartProductServiceImpl;
 	
 	@Override
 	public Optional<Cart> findByUserId(Integer userId) {
@@ -26,16 +30,26 @@ public class CartServiceImpl implements CartService {
 	}
 
 	@Override
-	public Product addProductToCart(Integer userId, Integer productId, Integer quantity) {
-		Optional<Cart> cart = findByUserId(userId);
+	public void addProductToCart(Integer userId, Integer productId, Integer quantity) {
+		Optional<Cart> optionalCart = findByUserId(userId);
 		Product product = productRepository.findById(productId);
-		if(cart.isPresent()) {
-			cart.get().getProducts().add(product);
+		CartProduct cartProduct;
+		Cart cart;
+		if(optionalCart.isPresent()) {
+			cart = optionalCart.get();
+			
+			cart.getProducts().add(product);
 		}else {
-			Cart newCart = new Cart(userId, product);
-			cartRepository.save(newCart);
+			cart = new Cart(userId, product);
+			cart = cartRepository.save(cart);
 		}
-		return product;
+		
+		CartProductKey cartProductKey = new CartProductKey(cart.getId(), productId);
+		
+		cartProduct = new CartProduct(cartProductKey, cart, product, quantity);
+		System.out.println("quantity = " + cartProduct.getQuantity());
+		cartProductServiceImpl.addProduct(cart.getId(), productId, quantity);
+		
 	}
 
 	@Override
