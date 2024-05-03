@@ -20,7 +20,7 @@ function actualizarListado() {
                         <div class="card text-center mx-auto h-100" >
                             <a style="cursor: pointer;" 
                               onclick='cargarProducto(${JSON.stringify(item)})'> 
-                              <img src="${item.img}" class="mx-auto card-img-top text-center" alt="${item.description}" /> 
+                              <img src="${item.image}" class="mx-auto card-img-top text-center" alt="${item.description}" /> 
                             </a>
                             <div class="card-body">
                                 <h5 class="card-title subtitle">${item.name}</h5>
@@ -48,6 +48,7 @@ function cargarDatos() {
             return response.json();
         })
         .then(data => {
+            console.log(data);
             listadoPublicaciones = data;
             actualizarListado();
         })
